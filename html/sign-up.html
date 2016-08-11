@@ -1,36 +1,35 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>4therodentz | User Sign Up Form</title>
-</head>
   <body>
     <nav>
       <ul>
         <li>homepage</li>
         <li>submissions page</li>
         <li>information page</li>
-        </ul>
+      </ul>
     </nav>
     <div id="sign-up">
       <form>
         <fieldset>
           <legend>Create an account</legend>
           <label class="form-labels" for="username">Username:</label>
-          <input type="text" name="userName" id="username" required autofocus><br />
-          <label class="form-labels" for="password">Password:</label><br />
-          <input type="password" name="password" id="password" required><br />
-          <label class="form-labels" for="confirmPassword">Confirm Password:</label><br />
-          <input type="password" name="confirmPassword" id="confirmPassword" required><br />
+          <input type="text" name="userName" id="username" required autofocus><br>
+          <label class="form-labels" for="password">Password:</label><br>
+          <input type="password" name="password" id="password" required><br>
+          <label class="form-labels" for="confirmPassword">Confirm Password:</label><br>
+          <input type="password" name="confirmPassword" id="confirmPassword" required><br>
           <label class="form-labels" for="email">Email:</label>
-          <input type="email" name="email" id="email" required><br />
+          <input type="email" name="email" id="email" required><br>
           <label class="form-labels" for="favoriteRodent">Which is your favorite rodent?</label>
           <select name="favoriteRodent" id="favoriteRodent">
             <option value="mouse">Mouse</option>
             <option value="vole">Vole</option>
             <option value="rat">Rat</option>
             <option value="beaver">Beaver</option>
-          </select>
+          </select><br>
+          <input type="submit" id="sign-up-submit" value="Submit"><br>
         </fieldset>
       </form>
+    </div>
   </body>
 </html>
