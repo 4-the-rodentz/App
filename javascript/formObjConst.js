@@ -1,9 +1,14 @@
-var DataPoint = function(userName, location, rodentType, size, date){
+// test this in the getCoords.html file
+
+var DataPoint = function(userName, location, rodentType, size, date, lat, lng, weight){
     this.userName = userName;
     this.location = location;
     this.rodentType = rodentType; // 1 thru 4
     this.size = size; // 1 thru 4
     this.date = date;
+    this.lat = lat;
+    this.lng = lng;
+    this.weight = weight;
     this.heatmapObject = function(lat, lng, weight){
         return {location: new google.maps.LatLng(lat, lng), weight: weight};
     };
