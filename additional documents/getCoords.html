@@ -28,6 +28,15 @@
         line-height: 30px;
         padding-left: 10px;
     }
+    #mapContainer {
+        height: 500px;
+        width: 80%;
+        margin: 0 auto;
+    }
+    input[type="text"] {
+        width: 500px;
+    }
+
 </style>
 
 <body>
@@ -35,9 +44,15 @@
     <input id="address" type="textbox" value="Sydney, NSW">
     <input id="submit" type="button" value="Geocode">
 </div>
-<div id="map"></div>
 
-<script src="getCoords.js"></script>
+<div id="mapContainer">
+    <div id="map"></div>
+</div>
+
+Latitude<input type="text" id="locationLat">
+Longitude<input type="text" id="locationLng">
+<script src="../javascript/getCoords.js"></script>
+<script src="../javascript/formObjConst.js"></script>
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQ3CfhGVr5wDueJuHuDxqBk3sZOyaIg4E&callback=initMap">
 </script>
