@@ -13,6 +13,13 @@ function initMap() {
         // placeMarkerAndPanTo(e.latLng, map);
         console.log(e.latLng.lat());
         console.log(e.latLng.lng());
+        var lat = e.latLng.lat();
+        var lng = e.latLng.lng();
+
+        // functions to store and pass lat and lang
+
+        placeMarker(e.latLng, map);
+        insertLatLng(lat, lng);
     });
 
     var geocoder = new google.maps.Geocoder();
@@ -21,20 +28,20 @@ function initMap() {
         geocodeAddress(geocoder, map);
     });
 }
-// var mapResults;
-// function geocodeAddress(geocoder, resultsMap) {
-//     var address = document.getElementById('address').value;
-//     geocoder.geocode({'address': address}, function(results, status) {
-//         mapResults = results;
-//         if (status === 'OK') {
-//             resultsMap.setCenter(results[0].geometry.location);
-//             var marker = new google.maps.Marker({
-//                 map: resultsMap,
-//                 position: results[0].geometry.location
-//             });
-//
-//         } else {
-//             alert('Geocode was not successful for the following reason: ' + status);
-//         }
-//     });
-// }
+
+// a function to place a marker on the map after click
+function placeMarker(latLng, map) {
+    var marker = new google.maps.Marker({
+        position: latLng,
+        map: map
+    });
+}
+
+// insert lat and lng into text field
+
+var locationDataDrop = document.getElementById('location');
+locationDataDrop.disabled = true; // this disables the ability to edit the field. They will have to click the map
+
+function insertLatLng(lat, lng) {
+    locationDataDrop.value = lat + "," + lng; //returned lat lng from click
+};
