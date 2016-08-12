@@ -1,2 +1,3 @@
 * 8/10/16 // initiated file 'AppStyleGuide.css' for App style guide <br/>
-* 8/10/16 //
+* 8/11/16 // rev'd CSS & HTML code in AppStyleGuide to achieve a webpage header section that combines title, nav bar, and logo ... to be used as base template for all pages ... ACP to branch 4_add_StyleGuide <br/>
+* 8/11/16 // 

@@ -1,32 +1,51 @@
 
 body {
-background-color:silver;
+background-color: silver;
 background-image:
-radial-gradient(circle at 100% 150%, blue 24%, white 25%, white 28%, silver 29%, silver 36%, white 36%, white 40%, transparent 40%, transparent),
+radial-gradient(circle at 100% 150%, magenta 24%, white 25%, white 28%, silver 29%, silver 36%, white 36%, white 40%, transparent 40%, transparent),
 radial-gradient(circle at 0    150%, silver 24%, white 25%, white 28%, silver 29%, silver 36%, white 36%, white 40%, transparent 40%, transparent),
 radial-gradient(circle at 50%  100%, white 10%, silver 11%, silver 23%, white 24%, white 30%, silver 31%, silver 43%, white 44%, white 50%, silver 51%, silver 63%, white 64%, white 71%, transparent 71%, transparent),
 radial-gradient(circle at 100% 50%, white 5%, silver 6%, silver 15%, white 16%, white 20%, silver 21%, silver 30%, white 31%, white 35%, silver 36%, silver 45%, white 46%, white 49%, transparent 50%, transparent),
 radial-gradient(circle at 0    50%, white 5%, silver 6%, silver 15%, white 16%, white 20%, silver 21%, silver 30%, white 31%, white 35%, silver 36%, silver 45%, white 46%, white 49%, transparent 50%, transparent);
-background-size:100px 50px;
+background-size: 100px 50px;
+}
+
+#header-nav-logo {
+  width: auto;
+  max-height: 200px;
 }
 
 header {
+  display: inline-block;
+  text-align: center;
+  margin-top: 30px;
+  margin-left: 550px;
+  padding-top: 0;
+  padding-bottom: 5px;
+  font-family: 'Bungee Inline', cursive;
+  font-size: 32px;
+  color: darkblue;
+  background-color: white;
+  border: 4px solid blue;
+  width: 330px;
 }
+
 footer {
 }
 nav {
-  display: inline-flex;
-  margin: 0 0;
+  display: inline-block;
+  margin-left: 280px;
   text-align: center;
-  width: 1100px;
-  padding: 0 0;
+  vertical-align: middle;
+  width: 800px;
+  padding-left: 0;
 }
 nav ul p {
   background-color: yellow;
   display: inline-block;
   max-width: 240px;
-  font: Trebuchet, sans-serif;
-  font-size: 22px;
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 24px;
   color: black;
   font-weight: bold;
   text-align: center;
@@ -40,6 +59,19 @@ nav p:hover {
   font-weight: bold;
   border: 5px solid red;
   border-radius: 6px;
+}
+article {
+  width: 430px;
+  margin: auto auto;
+  padding: 10px 10px 10px 10px;
+  border: 4px solid blue;
+  background-color: white;
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 34px;
+  text-decoration: underline;
+  color: blue;
+  text-align: center;
+  letter-spacing: 0.06em;
 }
 form {
 }
@@ -56,6 +88,10 @@ h3 {
 
   /* .class */
 
+.form-labels {
+
+}
+
   /* #id */
 
 #home-page {
@@ -67,10 +103,13 @@ h3 {
 #results-page {
 }
 #logo {
-  border: 6px solid red;
-  background-color: blue;
-  margin-top: 15px;
-  margin-left: 1240px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 115px;
+  border: 4px solid red;
+  border-radius: 7px;
+  background-color: magenta;
+  margin-top: -75px;
   padding: 3px 3px;
 }
 #img1 {
