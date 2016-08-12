@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>4therodentz</title>
+  <link rel="stylesheet" type="text/css" href="../css/heatmap.css">
 </head>
 <body>
 <nav>
@@ -23,10 +24,21 @@
         through our submissions page. We ask you simple question, like the type of rodent you saw,
         the size of the rodent, the area where you saw it, and the time of the sighting. </p>
 </article>
+
 <input type="text" id="location"> <!--this is only here to test-->
+<div id="map"></div> <!-- div for heatmap -->
 
 <footer>
     website created by @drewstock, @jonwalz, @elzed, @mizutombo and @erfillmore
 </footer>
+
+<!-- Two scripts for generating heatmap below -->
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCE-4-HYH9Din8Tjjpa2Nwrvd6CfI4dFtA&libraries=visualization&callback=initMap">
+</script>
+<script type="text/javascript" src="../javascript/heatmap.js">
+</script>
+<!-- /.heatmap -->
+
 </body>
 </html>
