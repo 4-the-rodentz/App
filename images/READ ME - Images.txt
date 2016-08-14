@@ -1,0 +1,10 @@
+
+* 8/10/16 // Images README <br/>
+* 8/10/16 // Saved image of Banksy Rat from Flickr page @ ... https://www.flickr.com/photos/blue_velcro/3117879154 ... image license @ ... https://creativecommons.org/licenses/by/2.0/ <br/>
+* 8/12/16 // Added images for Beaver, Rat, Vole, and Mouse.<br/>
+-- Source webpages as follows:<br/>
+--- beaver - https://commons.wikimedia.org/wiki/File:American_Beaver.jpg<br/>
+--- rat - https://commons.wikimedia.org/wiki/File:Co-swand-09-12.jpg<br/>
+--- vole - https://commons.wikimedia.org/wiki/File:California_Vole_(Microtus_californicus)_(cropped).jpg<br/>
+--- mouse - http://www.public-domain-image.com/free-images/fauna-animals/rats-mice-and-voles-pictures/deer-mouse-animal-peromyscus-maniculatus/attachment/deer-mouse-animal-peromyscus-maniculatus<br/>
+* 8/12/16 // 

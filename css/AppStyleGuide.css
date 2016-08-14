@@ -1,0 +1,155 @@
+
+body {
+background-color: silver;
+background-image:
+radial-gradient(circle at 100% 150%, magenta 24%, white 25%, white 28%, silver 29%, silver 36%, white 36%, white 40%, transparent 40%, transparent),
+radial-gradient(circle at 0    150%, silver 24%, white 25%, white 28%, silver 29%, silver 36%, white 36%, white 40%, transparent 40%, transparent),
+radial-gradient(circle at 50%  100%, white 10%, silver 11%, silver 23%, white 24%, white 30%, silver 31%, silver 43%, white 44%, white 50%, silver 51%, silver 63%, white 64%, white 71%, transparent 71%, transparent),
+radial-gradient(circle at 100% 50%, white 5%, silver 6%, silver 15%, white 16%, white 20%, silver 21%, silver 30%, white 31%, white 35%, silver 36%, silver 45%, white 46%, white 49%, transparent 50%, transparent),
+radial-gradient(circle at 0    50%, white 5%, silver 6%, silver 15%, white 16%, white 20%, silver 21%, silver 30%, white 31%, white 35%, silver 36%, silver 45%, white 46%, white 49%, transparent 50%, transparent);
+background-size: 100px 50px;
+}
+
+header {
+  display: inline-block;
+  text-align: center;
+  margin-top: 30px;
+  margin-left: 550px;
+  padding-top: 0;
+  padding-bottom: 5px;
+  font-family: 'Bungee Inline', cursive;
+  font-size: 32px;
+  color: darkblue;
+  background-color: white;
+  border: 4px solid blue;
+  width: 330px;
+}
+
+footer {
+}
+nav {
+  display: inline-block;
+  margin-left: 285px;
+  text-align: center;
+  vertical-align: middle;
+  width: 800px;
+  padding-left: 0;
+}
+nav ul a {
+  background-color: yellow;
+  display: inline-block;
+  max-width: 240px;
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 24px;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  border: 4px solid blue;
+  border-radius: 5px;
+  margin: 0 5px;
+  padding: 3px 10px;
+}
+nav a:hover {
+  color: blue;
+  font-weight: bold;
+  border: 5px solid red;
+  border-radius: 6px;
+}
+article p {
+  display: inline-block;
+  width: 625px;
+  margin: -750px auto auto 380px;
+  padding: 15px 20px 15px 20px;
+  border: 4px solid blue;
+  background-color: white;
+  font-family: 'Oregano', cursive;
+  font-size: 34px;
+  color: darkblue;
+  text-align: justify;
+  vertical-align:text-top;
+  letter-spacing: 0.06em;
+  line-height: 38px;
+}
+form {
+}
+aside {
+}
+div {
+}
+h1 {
+}
+h2 {
+}
+h3 {
+}
+
+  /* .class */
+
+.form-labels {
+
+}
+
+  /* #id */
+
+#home-page {
+}
+#data-input-page {
+}
+#sign-up-page {
+}
+#results-page {
+}
+#header-nav-logo {
+  width: auto;
+  max-height: 200px;
+  margin-top: 30px;
+}
+#logo {
+  display: inline-block;
+  vertical-align: middle;
+  width: 115px;
+  border: 4px solid red;
+  border-radius: 7px;
+  background-color: magenta;
+  margin-top: -75px;
+  padding: 3px 3px;
+}
+#images-article {
+  margin-top: -80px;
+}
+#beaver {
+  display: inline-block;
+  margin-top: 0px;
+  margin-left: 25px;
+  vertical-align: middle;
+  width: 320px;
+  border: 5px solid darkblue;
+  border-radius: 7px;
+}
+#rat {
+  display: inline-block;
+  margin-top: -1500px;
+  margin-left: 1080px;
+  vertical-align: middle;
+  width: 320px;
+  border: 5px solid darkblue;
+  border-radius: 7px;
+}
+#vole {
+  display: inline-block;
+  margin-top: 700px;
+  margin-left: -335px;
+  vertical-align: middle;
+  width: 320px;
+  border: 5px solid darkblue;
+  border-radius: 7px;
+}
+#mouse {
+  display: inline-block;
+  margin-top: -695px;
+  margin-left: 1080px;
+  vertical-align: middle;
+  width: 320px;
+  border: 5px solid darkblue;
+  border-radius: 7px;
+}

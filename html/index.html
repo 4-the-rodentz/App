@@ -1,29 +1,52 @@
 <!DOCTYPE html>
 <html>
-<header>
-</header>
+<head>
+  <title>4therodentz</title>
+  <link rel="stylesheet" type="text/css" href="../css/heatmap.css">
+  <link rel="stylesheet" type="text/css" href="../css/AppStyleGuide.css">
+  <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Pathway+Gothic+One|Oregano" rel="stylesheet">
+</head>
 <body>
-    <nav>
-        <ul>
-            <li>homepage</li>
-            <li>submissions page</li>
-            <li>information page</li>
-        </ul>
-    </nav>
-    <h1>4therodentz</h1>
-    <article>
-      <p>4theRodentz offers a fun Pokemon-Go-esque animal tracking game in order
-      to track the environmental impact of global warming on rodents. The
-      Portland Zoo created an app to track pikas; this app is an extention of that.
-      4therodentz is an open source program that tracks rodent populations in the Greater Portland
-      Area. With the data collected by your submissions, scientists can start hypothesising the
-      affect of global warming on larger animal populations. Rodent afficianadoes and beginners alike can enter their data
-      through our submissions page. We ask you simple question, like the type of rodent you saw,
-      the size of the rodent, the area where you saw it, and the time of the sighting. </p>
-    </article>
-    <footer>
-        website created by @drewstock, @jonwalz, @elzed, @mizutombo and @erfillmore
-    </footer>
-</body>
+<section id='header-nav-logo'>
+  <header>4-the-rodentz</header>
+  <nav>
+    <ul>
+      <a href='../html/index.html'>Home Page</a>
+      <a href='../html/AppWebPage-1.html'>Rodent Sighting Input</a>
+      <a href='../html/AppWebPage-2.html'>Rodent Sightings in PDX</a>
+    </ul>
+  </nav>
+  <img id="logo" src="../images/banksy_rat_3117879154_6c3b65efbb.jpg"/>
+</section>
+<section id="images-article">
+  <img id="beaver" src="../images/478px-American_Beaver.jpg"/>
+  <img id="vole" src="../images/California_Vole_(Microtus_californicus)_(cropped).jpg"/>
+  <article>
+      <p>4theRodentz offers a fun Pokemon-Go-esque animal tracking game, in order to track the environmental impact of global warming on rodents. This was inspired by
+      <a href="http://www.oregonzoo.org/news/2014/07/study-investigates-extreme-pikas-columbia-gorge">Cascades Pika Watch</a>, a program sponsored by the Oregon Zoo and the U.S. Geological Survey. This program crowdsources the collection of data on sightings of pikas, which are small wild rodents that live in the Columbia River Gorge.<br><br>
+      4therodentz crowdsources the tracking of rodent populations in the Greater Portland Area. With the data collected from your submissions, scientists can start hypothesising the effects of global warming on larger animal populations. Rodent aficionados and beginners alike can enter their data through our submissions page.<br/><br/>
+      We will ask you simple questions, like the type of rodent you saw, its size, the area where you saw it, and the time of the sighting. 4therodentz is currently focused on the following 4 rodents; beaver, rat, vole, and mouse.
+      </p>
+  </article>
+  <img id="rat" src="../images/rat - Co-swand-09-12.jpg"/>
+  <img id="mouse" src="../images/deer-mouse-725x484.jpg"/>
+</section>
+<br/>
+<br/>
+<input type="text" id="location"> <!--this is only here to test-->
+<div id="map"></div> <!-- div for heatmap -->
 
+<footer>
+  website created by <a href="https://github.com/DrewStock">Drew Stock</a>, <a href="https://github.com/jonwalz">Jon Walz</a>, <a href="https://github.com/elzed">Lee Zamastil</a>, <a href="https://github.com/mizutombo">Tom Shultz</a> and <a href="https://github.com/erfillmore">Elisabeth Fillmore</a>
+</footer>
+
+<!-- Two scripts for generating heatmap below -->
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCE-4-HYH9Din8Tjjpa2Nwrvd6CfI4dFtA&libraries=visualization&callback=initMap">
+</script>
+<script type="text/javascript" src="../javascript/heatmap.js">
+</script>
+<!-- /.heatmap -->
+
+</body>
 </html>

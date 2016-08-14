@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Geocoding service</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+</head>
+
+<style>
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    #map {
+        height: 100%;
+    }
+    #floating-panel {
+        position: absolute;
+        top: 10px;
+        left: 25%;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+        text-align: center;
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
+    }
+    #mapContainer {
+        height: 500px;
+        width: 80%;
+        margin: 0 auto;
+    }
+    input[type="text"] {
+        width: 500px;
+    }
+
+</style>
+
+<body>
+<div id="floating-panel">
+    <input id="address" type="textbox" value="Sydney, NSW">
+    <input id="submit" type="button" value="Geocode">
+</div>
+
+<div id="mapContainer">
+    <div id="map"></div>
+</div>
+
+Latitude<input type="text" id="locationLat">
+Longitude<input type="text" id="locationLng">
+<script src="../javascript/getCoords.js"></script>
+<script src="../javascript/formObjConst.js"></script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQ3CfhGVr5wDueJuHuDxqBk3sZOyaIg4E&callback=initMap">
+</script>
+</body>
+</html>

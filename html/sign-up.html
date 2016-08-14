@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <nav>
+      <ul>
+        <li>homepage</li>
+        <li>submissions page</li>
+        <li>information page</li>
+      </ul>
+    </nav>
+    <div id="sign-up">
+      <form>
+        <fieldset>
+          <legend>Create an account</legend>
+          <label class="form-labels" for="username">Username:</label>
+          <input type="text" name="userName" id="username" required autofocus><br>
+          <label class="form-labels" for="password">Password:</label><br>
+          <input type="password" name="password" id="password" required><br>
+          <label class="form-labels" for="confirmPassword">Confirm Password:</label><br>
+          <input type="password" name="confirmPassword" id="confirmPassword" required><br>
+          <label class="form-labels" for="email">Email:</label>
+          <input type="email" name="email" id="email" required><br>
+          <label class="form-labels" for="favoriteRodent">Which is your favorite rodent?</label>
+          <select name="favoriteRodent" id="favoriteRodent">
+            <option value="mouse">Mouse</option>
+            <option value="vole">Vole</option>
+            <option value="rat">Rat</option>
+            <option value="beaver">Beaver</option>
+          </select><br>
+          <input type="submit" id="sign-up-submit" value="Submit" onclick="newUserAccount(this.form)"><br>
+        </fieldset>
+      </form>
+    </div>
+    <script type="text/javascript" src="../javascript/user_constructor.js"></script>
+  </body>
+</html>
