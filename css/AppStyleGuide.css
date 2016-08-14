@@ -153,3 +153,7 @@ h3 {
   border: 5px solid darkblue;
   border-radius: 7px;
 }
+#map {
+  border: 5px solid green;
+  border-radius: 7px;
+}
