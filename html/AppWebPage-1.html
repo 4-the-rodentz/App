@@ -5,6 +5,7 @@
 <head>
   <title>4-the-rodentz</title>
   <link rel="stylesheet" type="text/css" href="../css/AppStyleGuide.css">
+  <link rel="stylesheet" type="text/css" href="../css/heatmap.css">
   <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Pathway+Gothic+One|Oregano" rel="stylesheet">
 </head>
 
@@ -22,7 +23,15 @@
 
 <body>
 
-
+  <div id="map"></div>
+  
+  Latitude<input type="text" id="locationLat">
+  Longitude<input type="text" id="locationLng">
+  <script src="../javascript/getCoords.js"></script>
+  <script src="../javascript/formObjConst.js"></script>
+  <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQ3CfhGVr5wDueJuHuDxqBk3sZOyaIg4E&callback=initMap">
+  </script>
 </body>
 
 </html>
