@@ -10,11 +10,6 @@ radial-gradient(circle at 0    50%, white 5%, silver 6%, silver 15%, white 16%, 
 background-size: 100px 50px;
 }
 
-#header-nav-logo {
-  width: auto;
-  max-height: 200px;
-}
-
 header {
   display: inline-block;
   text-align: center;
@@ -34,7 +29,7 @@ footer {
 }
 nav {
   display: inline-block;
-  margin-left: 280px;
+  margin-left: 285px;
   text-align: center;
   vertical-align: middle;
   width: 800px;
@@ -61,16 +56,19 @@ nav a:hover {
   border-radius: 6px;
 }
 article p {
+  display: inline-block;
   width: 625px;
-  margin: auto auto;
-  padding: 10px 10px 10px 10px;
+  margin: -750px auto auto 380px;
+  padding: 15px 20px 15px 20px;
   border: 4px solid blue;
   background-color: white;
   font-family: 'Oregano', cursive;
   font-size: 34px;
   color: darkblue;
-  text-align: center;
+  text-align: justify;
+  vertical-align:text-top;
   letter-spacing: 0.06em;
+  line-height: 38px;
 }
 form {
 }
@@ -101,6 +99,11 @@ h3 {
 }
 #results-page {
 }
+#header-nav-logo {
+  width: auto;
+  max-height: 200px;
+  margin-top: 30px;
+}
 #logo {
   display: inline-block;
   vertical-align: middle;
@@ -111,11 +114,42 @@ h3 {
   margin-top: -75px;
   padding: 3px 3px;
 }
-#img1 {
+#images-article {
+  margin-top: -80px;
 }
-#img2 {
+#beaver {
+  display: inline-block;
+  margin-top: 0px;
+  margin-left: 25px;
+  vertical-align: middle;
+  width: 320px;
+  border: 5px solid darkblue;
+  border-radius: 7px;
 }
-#img3 {
+#rat {
+  display: inline-block;
+  margin-top: -1500px;
+  margin-left: 1080px;
+  vertical-align: middle;
+  width: 320px;
+  border: 5px solid darkblue;
+  border-radius: 7px;
 }
-#img4 {
+#vole {
+  display: inline-block;
+  margin-top: 700px;
+  margin-left: -335px;
+  vertical-align: middle;
+  width: 320px;
+  border: 5px solid darkblue;
+  border-radius: 7px;
+}
+#mouse {
+  display: inline-block;
+  margin-top: -695px;
+  margin-left: 1080px;
+  vertical-align: middle;
+  width: 320px;
+  border: 5px solid darkblue;
+  border-radius: 7px;
 }
