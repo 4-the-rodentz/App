@@ -1,4 +1,6 @@
-
+* {
+  box-sizing: border-box;
+}
 body {
 background-color: silver;
 background-image:
@@ -71,6 +73,12 @@ article p {
   line-height: 38px;
 }
 form {
+  background-color: rgba(126, 130, 122, 0.95);
+  margin: 20px;
+  border-radius: 5px;
+}
+form fieldset {
+  border-style: none;
 }
 aside {
 }
@@ -151,5 +159,9 @@ h3 {
   vertical-align: middle;
   width: 320px;
   border: 5px solid darkblue;
+  border-radius: 7px;
+}
+#map {
+  border: 5px solid green;
   border-radius: 7px;
 }

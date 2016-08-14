@@ -2,6 +2,7 @@ var entryLat;     // for holding user's latitude click
 var entryLng;     // for holding user's longitude click
 var latLngObject; // object build with entryLat and entryLng variables
 
+// test this in the getCoords.html file
 
 function initMap() {
 
@@ -31,13 +32,11 @@ function initMap() {
         // functions to store and pass lat and lang
         placeMarker(e.latLng, map);
         insertLatLng(lat, lng);
+
+        // add function to create an array of objects to local storage
+
+        // localStorage.setItem('latLng', latlngArr);
     });
-
-    var geocoder = new google.maps.Geocoder();
-
-    // document.getElementById('submit').addEventListener('click', function() {
-    //     geocodeAddress(geocoder, map);
-    // });
 }
 
 // A function to place a marker on the map after click
