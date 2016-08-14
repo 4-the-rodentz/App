@@ -27,12 +27,6 @@ function initMap() {
 
         // localStorage.setItem('latLng', latlngArr);
     });
-
-    var geocoder = new google.maps.Geocoder();
-
-    document.getElementById('submit').addEventListener('click', function() {
-        geocodeAddress(geocoder, map);
-    });
 }
 
 // a function to place a marker on the map after click

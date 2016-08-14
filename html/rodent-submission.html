@@ -4,6 +4,7 @@
   <title>Geocoding service</title>
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
   <meta charset="utf-8">
+  <link rel="stylesheet" href="../css/AppStyleGuide.css">
 </head>
 
 <style>
@@ -40,9 +41,9 @@
 </style>
 
 <body>
-<h1>Post where you have spotted a rodent!</h1>
+<h2>Post where you have spotted a rodent!</h2>
 
-<div id="mapContainer">  
+<div id="mapContainer">
   <div id="map"></div>
 </div>
 
@@ -53,7 +54,7 @@
     Latitude<input type="text" id="locationLat">
     Longitude<input type="text" id="locationLng">
     <br>Rodent Type:
-    <select>
+    <select id="rodentType">
       <option value="mouse">Mouse</option>
       <option value="rat">Rat</option>
       <option value="vole">Vole</option>
@@ -64,12 +65,13 @@
     <input type="radio" name="size" value="medium"> <img src="../images/size-image1.jpg" height="62">
     <input type="radio" name="size" value="large"> <img src="../images/size-image1.jpg" height="82">
     <br>
-    <button>Submit</button>
+    <button id="formSubmit">Submit</button>
   </fieldset>
 </form>
 
 <script src="../javascript/getCoords.js"></script>
 <script src="../javascript/formObjConst.js"></script>
+<script src="../javascript/localStoreSubmit.js"></script>
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQ3CfhGVr5wDueJuHuDxqBk3sZOyaIg4E&callback=initMap">
 </script>
