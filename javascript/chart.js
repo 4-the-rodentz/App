@@ -19,13 +19,14 @@ for (var i = 0; i < locations.length; i++) {
   }
 }
 }
+animalCounts();
 
 var animalsArray = [beaverCount, ratCount, voleCount, mouseCount];
 var newArr = [];
 
 function convert() {
   newArr = [];
-  for (var i = 0; i < animalsArray.length; i++) {
+  for (var i = 0; i < 4; i++) {
     var newObj = {
       label: locations[i].rodentType,
       y: animalsArray[i],
@@ -49,3 +50,6 @@ function drawChart() {
 	});
 	chart.render();
 }
+
+convert();
+drawChart();
