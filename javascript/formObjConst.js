@@ -25,5 +25,5 @@ var DataPoint = function(userName, location, rodentType, size, date, lat, lng, w
 
 var locations = [
     new DataPoint('Jon', (45.531605383770994, -122.66063690185547, 10), "Beaver", "jan 1"),
-    new DataPoint('Dave', (45.531605383770994, -122.66063690185547, 10), "Beaver", "feb 10")
+    new DataPoint('Dave', (45.531605383770994, -122.66063690185547, 10), "Beaver", "feb 10"),
 ];
