@@ -36,7 +36,8 @@ function convert() {
   }
 }
 
-function drawChart() {
+function drawBarChart() {
+  convert();
 	var chart = new CanvasJS.Chart("chartContainer", {
 		title:{
 			text: "Number of Rodents in the Greater Portland Area"
@@ -51,5 +52,21 @@ function drawChart() {
 	chart.render();
 }
 
-convert();
-drawChart();
+function drawPieChart() {
+  convert();
+	var chart = new CanvasJS.Chart("chartContainer", {
+		title:{
+			text: "Number of Rodents in the Greater Portland Area"
+		},
+		data: [
+		{
+			type: "pie",
+			dataPoints: newArr
+		}
+		]
+	});
+	chart.render();
+}
+
+drawBarChart();
+drawPieChart();
