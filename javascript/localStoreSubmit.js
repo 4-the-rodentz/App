@@ -10,6 +10,9 @@ document.getElementById('formSubmit').addEventListener('click', function(e){
     rodentTypeEl = document.getElementById('rodentType');
     rodentTypeValue = rodentTypeEl.options[rodentTypeEl.selectedIndex].value;
 
+    document.getElementById("formSubmit").addEventListener("click", function(){
+        document.location = "/AppWebPage-2.html";
+    });
 
     // create function to convert data to json format and store in local storage
 
@@ -20,4 +23,3 @@ document.getElementById('formSubmit').addEventListener('click', function(e){
 
     // create a constructor for accessing data from local storage
 });
-
