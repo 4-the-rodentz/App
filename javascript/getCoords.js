@@ -1,3 +1,5 @@
+// test this in the getCoords.html file
+
 function initMap() {
 
     var map = new google.maps.Map(document.getElementById('map'), {
@@ -20,12 +22,10 @@ function initMap() {
 
         placeMarker(e.latLng, map);
         insertLatLng(lat, lng);
-    });
 
-    var geocoder = new google.maps.Geocoder();
+        // add function to create an array of objects to local storage
 
-    document.getElementById('submit').addEventListener('click', function() {
-        geocodeAddress(geocoder, map);
+        // localStorage.setItem('latLng', latlngArr);
     });
 }
 
@@ -50,4 +50,6 @@ lngDataDrop.readOnly = true;
 function insertLatLng(lat, lng) {
     latDataDrop.value = lat.toFixed(3);
     lngDataDrop.value = lng.toFixed(3);
-};
+}
+
+// insert lat and lng into local storage with usable object format
