@@ -5,7 +5,8 @@
 <head>
   <title>4-the-rodentz</title>
   <link rel="stylesheet" type="text/css" href="../css/AppStyleGuide.css">
-  <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Pathway+Gothic+One" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../css/heatmap.css">
+  <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Pathway+Gothic+One|Oregano" rel="stylesheet">
 </head>
 
   <section id='header-nav-logo'>
@@ -22,6 +23,20 @@
 
 <body>
 
+  <div id="map"></div>
+
+  Latitude<input type="text" id="locationLat">
+  Longitude<input type="text" id="locationLng">
+  <script src="../javascript/getCoords.js"></script>
+  <script src="../javascript/formObjConst.js"></script>
+  <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQ3CfhGVr5wDueJuHuDxqBk3sZOyaIg4E&callback=initMap">
+  </script>
+<br/>
+<br/>
+<footer>
+  website created by <a href="https://github.com/DrewStock">Drew Stock</a>, <a href="https://github.com/jonwalz">Jon Walz</a>, <a href="https://github.com/elzed">Lee Zamastil</a>, <a href="https://github.com/mizutombo">Tom Shultz</a> and <a href="https://github.com/erfillmore">Elisabeth Fillmore</a>
+</footer>
 
 </body>
 
