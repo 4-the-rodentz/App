@@ -34,8 +34,9 @@ header h1 {
     color: #8D5B04;
     text-shadow: 2px 2px 4px #F2CC08, -2px -2px 4px #F2CC08;
 }
-header img {
-    display: block;
+nav img {
+    position: absolute;
+    left: 50px;
     width: 115px;
 }
 #logo {
