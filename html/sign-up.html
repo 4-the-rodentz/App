@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <style>
+      .form-warning {
+        color: red;
+      }
+    </style>
+  </head>
   <body>
     <nav>
       <ul>
@@ -8,26 +15,34 @@
         <li>information page</li>
       </ul>
     </nav>
-    <div id="sign-up">
-      <form id="user-form">
-        <fieldset>
-          <legend>Create an account</legend>
-          <label class="form-labels" id="username-label" for="username">Username:</label>
-          <input type="text" name="userName" id="username" required autofocus><br>
-          <label class="form-labels" id="password-label" for="password">Password:</label><br>
-          <input type="password" name="password" id="password" required><br>
-          <label class="form-labels" id="email-label" for="email">Email:</label>
-          <input type="email" name="email" id="email" required><br>
-          <label class="form-labels" for="favoriteRodent">Which is your favorite rodent?</label>
-          <select name="favoriteRodent" id="favoriteRodent">
-            <option value="mouse">Mouse</option>
-            <option value="vole">Vole</option>
-            <option value="rat">Rat</option>
-            <option value="beaver">Beaver</option>
-          </select><br>
-          <input type="submit" id="sign-up-submit" value="Submit" onclick="newUserAccount(this.form)"><br>
-        </fieldset>
-      </form>
+    <div id="greeting">
+      <h1 id="user-greeting"></h1>
+    </div>
+    <div id="new-user-modal">
+      <div id="sign-up">
+        <form id="user-form">
+          <fieldset>
+            <legend>Create an account</legend>
+            <p id="userName-warning" class="form-warning"></p>
+            <label class="form-labels" id="userName-label" for=userName>Username:</label>
+            <input type="text" name=userName id="userName" required autofocus><br>
+            <p id="password-warning" class="form-warning"></p>
+            <label class="form-labels" id="password-label" for="password">Password:</label><br>
+            <input type="password" name="password" id="password" required><br>
+            <p id="email-warning" class="form-warning"></p>
+            <label class="form-labels" id="email-label" for="email">Email:</label>
+            <input type="email" name="email" id="email" required><br>
+            <label class="form-labels" for="favoriteRodent">Which is your favorite rodent?</label>
+            <select name="favoriteRodent" id="favoriteRodent">
+              <option value="mouse">Mouse</option>
+              <option value="vole">Vole</option>
+              <option value="rat">Rat</option>
+              <option value="beaver">Beaver</option>
+            </select><br>
+            <input type="submit" id="sign-up-submit" value="Submit"><br>
+          </fieldset>
+        </form>
+      </div>
     </div>
     <script type="text/javascript" src="../javascript/user_constructor.js"></script>
   </body>
