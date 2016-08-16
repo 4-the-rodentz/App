@@ -150,6 +150,30 @@ h3 {
 /*      #ids     */
 /****          ***/
 
+#articleButton {
+    /*width: 200px;*/
+    height: 50px;
+    margin: 10px;
+    align-self: center;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 24px;
+    border: 2px solid #F2CC08;
+    background-color: #124B52;
+    color: #F2CC08;
+    padding: 0 30px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(19, 35, 47, 0.77);
+    -moz-box-shadow:    2px 2px 5px 0px rgba(19, 35, 47, 0.77);
+    box-shadow:         2px 2px 5px 0px rgba(19, 35, 47, 0.77);
+    transition: box-shadow 100ms ease-in-out;
+}
+#articleButton:hover {
+    -webkit-box-shadow: 4px 7px 5px 0px rgba(19, 35, 47, 0.77);
+    -moz-box-shadow:    4px 7px 5px 0px rgba(19, 35, 47, 0.77);
+    box-shadow:         4px 7px 5px 0px rgba(19, 35, 47, 0.77);
+}
 #backgroundOverlay {
     position: fixed;
     z-index: -1;
@@ -167,6 +191,11 @@ h3 {
     -webkit-box-shadow: 4px 7px 5px 0px rgba(19, 35, 47, 0.77);
     -moz-box-shadow:    4px 7px 5px 0px rgba(19, 35, 47, 0.77);
     box-shadow:         4px 7px 5px 0px rgba(19, 35, 47, 0.77);
+}
+#images-article article {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 #home-page {
 }
