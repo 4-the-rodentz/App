@@ -165,3 +165,9 @@ h3 {
   border: 5px solid green;
   border-radius: 7px;
 }
+#chartContainer {
+  margin: 50px auto 50px auto;
+}
+#seasonalChart {
+  margin-top: 425px;
+}
