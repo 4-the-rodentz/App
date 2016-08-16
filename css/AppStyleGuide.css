@@ -195,6 +195,7 @@ h3 {
 #images-article article {
     display: flex;
     flex-direction: column;
+    text-align: center;
 }
 #home-page {
 }
