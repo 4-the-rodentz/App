@@ -1,5 +1,6 @@
 // test this in the getCoords.html file
 
+
 var DataPoint = function(userName, location, rodentType, size, date, lat, lng, weight){
     this.userName = userName;
     this.location = location;

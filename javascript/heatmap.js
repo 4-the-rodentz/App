@@ -1,3 +1,9 @@
+// Retrieve the latitude and longitude from storage
+var retrievedLatLng = localStorage.getItem('latLngObject');
+var parsedLatLng = JSON.parse(retrievedLatLng);
+console.log('retrievedLatLng: ', JSON.parse(retrievedLatLng));
+console.log('parsedLatLng: ', parsedLatLng);
+
 var map, heatmap;
 
 function initMap() {
@@ -36,7 +42,7 @@ function changeGradient() {
 }
 
 
-// Manually entered heatmap data
+// Heatmap data 
 function getPoints() {
   return [
     new google.maps.LatLng(45.516410, -122.676450),
@@ -103,5 +109,6 @@ function getPoints() {
     new google.maps.LatLng(45.514580, -122.595060),
     new google.maps.LatLng(45.515260, -122.596900),
     new google.maps.LatLng(45.511830, -122.595900),
+    new google.maps.LatLng(parsedLatLng.lat, parsedLatLng.lng), // variable data from getCoords.js
   ];
 }

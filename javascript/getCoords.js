@@ -1,10 +1,14 @@
+var entryLat;     // for holding user's latitude click
+var entryLng;     // for holding user's longitude click
+var latLngObject; // object build with entryLat and entryLng variables
+
 // test this in the getCoords.html file
 
 function initMap() {
 
     var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 12,
-        center: {lat: 45.52693, lng: -122.67760},
+        zoom: 13,
+        center: {lat: 45.512, lng: -122.668},
         disableDefaultUI: true
     });
 
@@ -18,8 +22,14 @@ function initMap() {
         var lat = e.latLng.lat();
         var lng = e.latLng.lng();
 
-        // functions to store and pass lat and lang
+        // Global variables used in the storeUserLatLng() function
+        entryLat = e.latLng.lat();
+        entryLng = e.latLng.lng();
 
+        // Call this function for storing user-selected latitude and longitude
+        storeUserLatLng();
+
+        // functions to store and pass lat and lang
         placeMarker(e.latLng, map);
         insertLatLng(lat, lng);
 
@@ -29,7 +39,7 @@ function initMap() {
     });
 }
 
-// a function to place a marker on the map after click
+// A function to place a marker on the map after click
 function placeMarker(latLng, map) {
     var marker = new google.maps.Marker({
         position: latLng,
@@ -51,5 +61,8 @@ function insertLatLng(lat, lng) {
     latDataDrop.value = lat.toFixed(3);
     lngDataDrop.value = lng.toFixed(3);
 }
-
-// insert lat and lng into local storage with usable object format
+// Function for storing user-selected latitude and longitude
+function storeUserLatLng() {
+  latLngObject = { lat: entryLat, lng: entryLng };
+  localStorage.setItem('latLngObject', JSON.stringify(latLngObject));
+}
