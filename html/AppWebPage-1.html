@@ -7,6 +7,79 @@
   <link rel="stylesheet" type="text/css" href="../css/AppStyleGuide.css">
   <link rel="stylesheet" type="text/css" href="../css/heatmap.css">
   <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Pathway+Gothic+One|Oregano" rel="stylesheet">
+  <style>
+    #new-user-modal {
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background-color: rgba(0,0,0, .8);
+    align-content: center;
+  }
+
+  #sign-up {
+    z-index: 2;
+    background-color: rgba(180,180,180,1);
+    width: 80%;
+    height: 90%;
+    margin: 20px auto;
+    border-radius: 5px;
+  }
+
+  #user-form {
+    font-family: Pathway Gothic One, sans-serif;
+    background-color: rgba(180,180,180,1);
+    font-size: 30px;
+    margin: 50px auto;
+    width: 50%;
+    height: 70%;
+    padding-top: 50px;
+    text-align: center;
+  }
+
+  #user-form input {
+    padding: 5px;
+    font-size: 20px;
+    /*display: inline;*/
+  }
+
+  #user-form select {
+    padding: 10px;
+  }
+
+  .form-labels {
+    padding: 10px;
+  }
+
+  .form-warning {
+    font-size: 16px;
+    color: red;
+  }
+
+  #sign-up-submit.sign-up-button {
+    font-weight: bold;
+    font-family: Pathway Gothic One, sans-serif;
+    font-size: 25px;
+    background-color: #d3d3d3;
+    padding: 5px 5px;
+    margin: 25px auto;
+    border: 1px solid #606361;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #000;
+  }
+
+  #user-greeting {
+    font-family: Pathway Gothic One, sans-serif;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 5px;
+    width: 50%;
+    margin: 10px auto;
+    padding: 10px;
+  }
+
+  </style>
 </head>
 
   <section id='header-nav-logo'>
@@ -22,11 +95,45 @@
 </section>
 
 <body>
+<h1 id="user-greeting"></h1>
+  <div id="new-user-modal">
+    <div id="sign-up">
+      <form id="user-form">
+        <fieldset>
+          <legend>Please create a user account</legend>
+          <p id="userName-warning" class="form-warning"></p>
+          <label class="form-labels" id="userName-label" for=userName>Username:</label><br>
+          <input type="text" name=userName class="text-input" id="userName" required autofocus><br>
+          <p id="password-warning" class="form-warning"></p>
+          <label class="form-labels" id="password-label" for="password">Password:</label><br>
+          <input type="password" name="password" class="text-input" id="password" required><br>
+          <p id="email-warning" class="form-warning"></p>
+          <label class="form-labels" id="email-label" for="email">Email:</label><br>
+          <input type="email" name="email" class="text-input" id="email" required><br><br>
+          <label class="form-labels" for="favoriteRodent">Which is your favorite rodent?</label><br>
+          <select name="favoriteRodent" id="favoriteRodent"><br>
+            <option value="mouse">Mouse</option>
+            <option value="vole">Vole</option>
+            <option value="rat">Rat</option>
+            <option value="beaver">Beaver</option>
+          </select><br>
+          <input type="submit" class="sign-up-button" id="sign-up-submit" value="Submit"><br>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="../javascript/user_constructor.js"></script>
+
+
+
 
   <div id="map"></div>
 
   Latitude<input type="text" id="locationLat">
   Longitude<input type="text" id="locationLng">
+
+
   <script src="../javascript/getCoords.js"></script>
   <script src="../javascript/formObjConst.js"></script>
   <script async defer
