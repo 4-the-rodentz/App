@@ -8,7 +8,7 @@ var rodentSeasonTrack = function(animalArray, sightMonthArray) {
   this.animalArray = animalArray;
   this.sightMonthArray = sightMonthArray;
 }
-    for (var i = 0; i < rodentSeasonTrack.length; i++) {
+    for (var i = 0; i < locations.length; i++) {
       var currentImage = locations[i];
       var seasonChart; // initiate global chart variable
       rodentSeason.push({
