@@ -8,23 +8,24 @@
     <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Pathway+Gothic+One|Oregano" rel="stylesheet">
 </head>
 <body>
-<section id='header-nav-logo'>
-    <header>4-the-rodentz</header>
-    <nav>
-        <ul>
-            <a href='../html/index.html'>Home Page</a>
-            <a href='../html/AppWebPage-1.html'>Rodent Sighting Input</a>
-            <a href='../html/AppWebPage-2.html'>Rodent Sightings in PDX</a>
-        </ul>
-    </nav>
+<div id="backgroundOverlay"></div>
+<nav>
     <img id="logo" src="../images/banksy_rat_3117879154_6c3b65efbb.jpg"/>
+    <ul>
+        <a href='../html/index.html'>Home Page</a>
+        <a href='../html/AppWebPage-1.html'>Rodent Sighting Input</a>
+        <a href='../html/AppWebPage-2.html'>Rodent Sightings in PDX</a>
+    </ul>
+</nav>
+<section id='header-nav-logo'>
+
+    <header>
+        <h1 id="tagLine">4 The Rodentz</h1>
+    </header>
 </section>
 <div id="map"></div> <!-- div for heatmap -->
 
 <div id="chartContainer"></div>
-<script type="text/javascript" src="../javascript/formObjConst.js"></script>
-<script type="text/javascript" src="../javascript/canvasjs.min.js"></script>
-<script type="text/javascript" src="../javascript/chart.js"></script>
 
 <br/>
 <br/>
@@ -33,13 +34,16 @@
     Walz</a>, <a href="https://github.com/elzed">Lee Zamastil</a>, <a href="https://github.com/mizutombo">Tom Shultz</a>
     and <a href="https://github.com/erfillmore">Elisabeth Fillmore</a>
 </footer>
-
-<!-- Two scripts for generating heatmap below -->
 <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCE-4-HYH9Din8Tjjpa2Nwrvd6CfI4dFtA&libraries=visualization&callback=initMap">
+                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCE-4-HYH9Din8Tjjpa2Nwrvd6CfI4dFtA&libraries=visualization&callback=initMap">
 </script>
-<script type="text/javascript" src="../javascript/heatmap.js">
-</script>
+<script type="text/javascript" src="../javascript/formObjConst.js"></script>
+<script type="text/javascript" src="../javascript/canvasjs.min.js"></script>
+<script type="text/javascript" src="../javascript/chart.js"></script>
+<!-- Two scripts for generating heatmap below -->
+
+<script type="text/javascript" src="../javascript/heatmap.js"></script>
+<script type="text/javascript" src="../javascript/scrollScripts.js "></script>
 </body>
 
 </html>

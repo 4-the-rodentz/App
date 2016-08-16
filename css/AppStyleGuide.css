@@ -1,169 +1,299 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
+
 body {
-background-color: silver;
-background-image:
-radial-gradient(circle at 100% 150%, magenta 24%, white 25%, white 28%, silver 29%, silver 36%, white 36%, white 40%, transparent 40%, transparent),
-radial-gradient(circle at 0    150%, silver 24%, white 25%, white 28%, silver 29%, silver 36%, white 36%, white 40%, transparent 40%, transparent),
-radial-gradient(circle at 50%  100%, white 10%, silver 11%, silver 23%, white 24%, white 30%, silver 31%, silver 43%, white 44%, white 50%, silver 51%, silver 63%, white 64%, white 71%, transparent 71%, transparent),
-radial-gradient(circle at 100% 50%, white 5%, silver 6%, silver 15%, white 16%, white 20%, silver 21%, silver 30%, white 31%, white 35%, silver 36%, silver 45%, white 46%, white 49%, transparent 50%, transparent),
-radial-gradient(circle at 0    50%, white 5%, silver 6%, silver 15%, white 16%, white 20%, silver 21%, silver 30%, white 31%, white 35%, silver 36%, silver 45%, white 46%, white 49%, transparent 50%, transparent);
-background-size: 100px 50px;
+    background-color: #F3EDE1;
+    background-image:
+            radial-gradient(circle at 100% 150%, magenta 24%, white 25%, white 28%, silver 29%, silver 36%, white 36%, white 40%, transparent 40%, transparent),
+            radial-gradient(circle at 0 150%, silver 24%, white 25%, white 28%, silver 29%, silver 36%, white 36%, white 40%, transparent 40%, transparent),
+            radial-gradient(circle at 50% 100%, white 10%, silver 11%, silver 23%, white 24%, white 30%, silver 31%, silver 43%, white 44%, white 50%, silver 51%, silver 63%, white 64%, white 71%, transparent 71%, transparent),
+            radial-gradient(circle at 100% 50%, white 5%, silver 6%, silver 15%, white 16%, white 20%, silver 21%, silver 30%, white 31%, white 35%, silver 36%, silver 45%, white 46%, white 49%, transparent 50%, transparent),
+            radial-gradient(circle at 0 50%, white 5%, silver 6%, silver 15%, white 16%, white 20%, silver 21%, silver 30%, white 31%, white 35%, silver 36%, silver 45%, white 46%, white 49%, transparent 50%, transparent);
+    background-size: 100px 50px;
+    background-attachment: fixed;
+    padding: 0;
+    margin: 0;
 }
 
 header {
-  display: inline-block;
-  text-align: center;
-  margin-top: 30px;
-  margin-left: 550px;
-  padding-top: 0;
-  padding-bottom: 5px;
-  font-family: 'Bungee Inline', cursive;
-  font-size: 32px;
-  color: darkblue;
-  background-color: white;
-  border: 4px solid blue;
-  width: 330px;
+    background: url("../images/cityLow.jpeg") no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    background-position: 0 -450px;
+    min-width: 100%;
+    height: 400px;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+header h1 {
+    display: block;
+    font-family: 'Oregano', cursive;
+    font-size: 68px;
+    color: #F13A30;
+    text-shadow: 2px 2px 4px #F2CC08, -2px -2px 4px #F2CC08;
+}
+nav img {
+    position: absolute;
+    left: 50px;
+    width: 115px;
+}
+#logo {
+    /*vertical-align: middle;*/
+    /*width: 115px;*/
+    /*border: 4px solid red;*/
+    /*border-radius: 7px;*/
+    /*background-color: magenta;*/
+    /*margin-top: -75px;*/
+    /*padding: 3px 3px;*/
 }
 
 footer {
+    color: #447B82;
+    background-color: #0C3136;
+    text-align: right;
+    font-family: 'Pathway Gothic One', sans-serif;
+    padding: 25px 10px;
+}
+footer a {
+    color: #F2CC08;
+    font-family: 'Pathway Gothic One', sans-serif;
 }
 nav {
-  display: inline-block;
-  margin-left: 285px;
-  text-align: center;
-  vertical-align: middle;
-  width: 800px;
-  padding-left: 0;
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #124B52;
+    width: 100%;
+    z-index: 5000;
+}
+
+nav ul {
+    padding: 0 20px;
+    margin: 5px;
 }
 nav ul a {
-  background-color: yellow;
-  display: inline-block;
-  max-width: 240px;
-  font-family: 'Pathway Gothic One', sans-serif;
-  font-size: 24px;
-  color: black;
-  font-weight: bold;
-  text-align: center;
-  border: 4px solid blue;
-  border-radius: 5px;
-  margin: 0 5px;
-  padding: 3px 10px;
+    display: inline-block;
+
+    max-width: 240px;
+    font-family: 'Pathway Gothic One', sans-serif;
+    border-bottom: 2px solid rgba(0,0,0,0);
+    font-size: 24px;
+    color: #F2CC08;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    margin: 0 5px;
+    padding: 3px 10px;
+    transition: border-bottom 200ms ease-in-out;
 }
+
 nav a:hover {
-  color: blue;
-  font-weight: bold;
-  border: 5px solid red;
-  border-radius: 6px;
+    font-weight: bold;
+    border-bottom: 2px solid;
 }
+
 article p {
-  display: inline-block;
-  width: 625px;
-  margin: -750px auto auto 380px;
-  padding: 15px 20px 15px 20px;
-  border: 4px solid blue;
-  background-color: white;
-  font-family: 'Oregano', cursive;
-  font-size: 34px;
-  color: darkblue;
-  text-align: justify;
-  vertical-align:text-top;
-  letter-spacing: 0.06em;
-  line-height: 38px;
+    margin: 0;
+    padding: 30px;
+    background-color: white;
+    font-family: 'Oregano', cursive;
+    font-size: 24px;
+    text-align: justify;
+    vertical-align: text-top;
+    letter-spacing: 0.06em;
+    line-height: 38px;
 }
+
 form {
-  background-color: rgba(126, 130, 122, 0.95);
-  margin: 20px;
-  border-radius: 5px;
+    background-color: rgba(126, 130, 122, 0.95);
+    margin: 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'Pathway Gothic One', sans-serif;
 }
+
 form fieldset {
-  border-style: none;
+    border-style: none;
 }
+
 aside {
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
+
 div {
 }
+
 h1 {
 }
+
 h2 {
 }
+
 h3 {
 }
 
-  /* .class */
+/* .class */
 
 .form-labels {
 
 }
 
-  /* #id */
+/****          ***/
+/*      #ids     */
+/****          ***/
 
+#backgroundOverlay {
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(87, 143, 145, 0.9);
+}
+
+#images-article {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+#images-article img {
+    -webkit-box-shadow: 4px 7px 5px 0px rgba(19, 35, 47, 0.77);
+    -moz-box-shadow:    4px 7px 5px 0px rgba(19, 35, 47, 0.77);
+    box-shadow:         4px 7px 5px 0px rgba(19, 35, 47, 0.77);
+}
 #home-page {
 }
+
 #data-input-page {
 }
+
 #sign-up-page {
 }
+
 #results-page {
 }
+
 #header-nav-logo {
-  width: auto;
-  max-height: 200px;
-  margin-top: 30px;
+    padding-top: 44px;
 }
-#logo {
-  display: inline-block;
-  vertical-align: middle;
-  width: 115px;
-  border: 4px solid red;
-  border-radius: 7px;
-  background-color: magenta;
-  margin-top: -75px;
-  padding: 3px 3px;
-}
-#images-article {
-  margin-top: -80px;
-}
+
+
 #beaver {
-  display: inline-block;
-  margin-top: 0px;
-  margin-left: 25px;
-  vertical-align: middle;
-  width: 320px;
-  border: 5px solid darkblue;
-  border-radius: 7px;
+    width: 100%;
+    vertical-align: middle;
+    border-radius: 7px;
 }
+
 #rat {
-  display: inline-block;
-  margin-top: -1500px;
-  margin-left: 1080px;
-  vertical-align: middle;
-  width: 320px;
-  border: 5px solid darkblue;
-  border-radius: 7px;
+
+    /*margin-top: -1500px;*/
+    vertical-align: middle;
+    width: 100%;
+    border-radius: 7px;
 }
+
 #vole {
-  display: inline-block;
-  margin-top: 700px;
-  margin-left: -335px;
-  vertical-align: middle;
-  width: 320px;
-  border: 5px solid darkblue;
-  border-radius: 7px;
+    width: 100%;
+    /*margin-top: 700px;*/
+    /*margin-left: -335px;*/
+    vertical-align: middle;
+    border-radius: 7px;
 }
+
 #mouse {
-  display: inline-block;
-  margin-top: -695px;
-  margin-left: 1080px;
-  vertical-align: middle;
-  width: 320px;
-  border: 5px solid darkblue;
-  border-radius: 7px;
+    width: 100%;
+    /*margin-top: -695px;*/
+    /*margin-left: 1080px;*/
+    vertical-align: middle;
+    border-radius: 7px;
 }
+
 #map {
-  border: 5px solid green;
-  border-radius: 7px;
+    border: 5px solid;
+    border-radius: 7px;
+    -webkit-box-shadow: 0px 0px 0px 12px rgba(50, 50, 50, 0.5);
+    -moz-box-shadow:    0px 0px 0px 12px rgba(50, 50, 50, 0.5);
+    box-shadow:         0px 0px 0px 12px rgba(50, 50, 50, 0.5);
+}
+#mapContainer {
+    text-align: center;
+    height: 500px;
+    width: 80%;
+    margin: 0 auto;
+}
+#selectAndArea{
+    text-align: center;
+    background: rgb(19, 35, 47);
+    color: #F2CC08;
+    padding: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    width: 80%;
+    margin: 10px auto;
+}
+#submissionForm {
+    background: rgba(19, 35, 47, 0.9);
+    padding: 40px;
+    max-width: 600px;
+    margin: 40px auto;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+    color: #F2CC08;
+}
+#submissionForm label {
+    margin: 10px;
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.5);
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    font-size: 22px;
+}
+#submissionForm input, #submissionForm textarea {
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+    font-size: 22px;
+    display: block;
+    height: 100%;
+    padding: 5px 10px;
+    background: none;
+    border: 1px solid #a0b3b0;
+    border-radius: 0;
+    -webkit-transition: border-color .25s ease, box-shadow .25s ease;
+    transition: border-color .25s ease, box-shadow .25s ease;
+}
+#submissionForm input[type="radio"] {
+    margin: 10px;
+    display: inline-block;
+    width: auto;
+}
+#submissionForm select {
+    margin: 50px;
+    /*background: transparent;*/
+    width: 150px;
+    padding: 5px 35px 5px 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    height: 34px;
+
+}
+#submissionForm button {
+    width: 200px;
+    height: 50px;
+    margin: 50px;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 24px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
 }
 
 /* Begin-Styles for user sign-up form*/
@@ -258,3 +388,9 @@ h3 {
   height: 34px;
 }
 /* End-Styles for user sign-up form*/
+
+@media (max-width: 1200px) {
+    header {
+        background-position: 0 40px;
+    }
+}

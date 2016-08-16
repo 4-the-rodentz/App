@@ -8,21 +8,29 @@
   <link rel="stylesheet" type="text/css" href="../css/heatmap.css">
   <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Pathway+Gothic+One|Oregano" rel="stylesheet">
 </head>
-
-  <section id='header-nav-logo'>
-  <header>4-the-rodentz</header>
-  <nav>
-    <ul>
-      <a href='../html/index.html'>Home Page</a>
-      <a href='../html/AppWebPage-1.html'>Rodent Sighting Input</a>
-      <a href='../html/AppWebPage-2.html'>Rodent Sightings in PDX</a>
-    </ul>
-  </nav>
-  <img id="logo" src="../images/banksy_rat_3117879154_6c3b65efbb.jpg"/>
-</section>
-
 <body>
-<h1 id="user-greeting"></h1>
+<div id="backgroundOverlay"></div>
+<nav>
+  <img id="logo" src="../images/banksy_rat_3117879154_6c3b65efbb.jpg"/>
+  <ul>
+    <a href='../html/index.html'>Home Page</a>
+    <a href='../html/AppWebPage-1.html'>Rodent Sighting Input</a>
+    <a href='../html/AppWebPage-2.html'>Rodent Sightings in PDX</a>
+  </ul>
+</nav>
+<section id='header-nav-logo'>
+
+  <header>
+    <h1 id="tagLine">4 The Rodentz</h1>
+  </header>
+</section>
+<h2 id="selectAndArea">Select an area where you have seen a rodent</h2>
+<div id="mapContainer">
+
+  <div id="map"></div>
+</div>
+
+<p id="user-greeting"></p>
   <div id="new-user-modal">
     <div id="sign-up">
       <form id="user-form">
@@ -55,23 +63,53 @@
 
 
 
-  <div id="map"></div>
 
-  Latitude<input type="text" id="locationLat">
-  Longitude<input type="text" id="locationLng">
-
-
-  <script src="../javascript/getCoords.js"></script>
-  <script src="../javascript/formObjConst.js"></script>
-  <script async defer
-          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQ3CfhGVr5wDueJuHuDxqBk3sZOyaIg4E&callback=initMap">
-  </script>
-<br/>
-<br/>
+<form id="submissionForm">
+  <fieldset>
+    <h1>Rodent Submission Data</h1>
+    <h2>Location Data:</h2><br>
+    <label for="locationLat">Latitude</label>
+    <input type="text" id="locationLat" value="Please Click Map" disabled readonly>
+    <label for="locationLng">Longitude</label>
+    <input type="text" id="locationLng" value="Please Click Map" disabled readonly>
+    <label  for="rodentType">Rodent Type:</label>
+    <select id="rodentType">
+      <option value="mouse">Mouse</option>
+      <option value="rat">Rat</option>
+      <option value="vole">Vole</option>
+      <option value="beaver">Beaver</option>
+    </select>
+    <h2>Rodent Size:</h2>
+    <label for="sizeSmall"><img src="../images/size-image1.jpg" height="42"></label>
+    <input type="radio" name="size" value="small" id="sizeSmall">
+    <label for="sizeMedium"><img src="../images/size-image1.jpg" height="62"></label>
+    <input type="radio" name="size" value="medium" id="sizeMedium">
+    <label for="sizeLarge"><img src="../images/size-image1.jpg" height="82"></label>
+    <input type="radio" name="size" value="large" id="sizeLarge">
+    <br>
+    <button id="formSubmit">Submit</button>
+  </fieldset>
+</form>
 <footer>
-  website created by <a href="https://github.com/DrewStock">Drew Stock</a>, <a href="https://github.com/jonwalz">Jon Walz</a>, <a href="https://github.com/elzed">Lee Zamastil</a>, <a href="https://github.com/mizutombo">Tom Shultz</a> and <a href="https://github.com/erfillmore">Elisabeth Fillmore</a>
+  Website created by: <a href="https://github.com/DrewStock">Drew Stock</a>, <a href="https://github.com/jonwalz">Jon
+  Walz</a>, <a href="https://github.com/elzed">Lee Zamastil</a>, <a href="https://github.com/mizutombo">Tom Shultz</a>
+  and <a href="https://github.com/erfillmore">Elisabeth Fillmore</a>
+  <br/>
+  Image credits: <a href='https://www.flickr.com/photos/blue_velcro/3117879154'>banksy rat</a>, <a
+        href='https://commons.wikimedia.org/wiki/File:American_Beaver.jpg'>beaver</a>, <a
+        href='https://commons.wikimedia.org/wiki/File:Co-swand-09-12.jpg'>rat</a>, <a
+        href='https://commons.wikimedia.org/wiki/File:California_Vole_(Microtus_californicus)_(cropped).jpg'>vole</a>,
+  <a href='http://www.public-domain-image.com/free-images/fauna-animals/rats-mice-and-voles-pictures/deer-mouse-animal-peromyscus-maniculatus/attachment/deer-mouse-animal-peromyscus-maniculatus'>mouse</a>
+  <br/>
 </footer>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQ3CfhGVr5wDueJuHuDxqBk3sZOyaIg4E&callback=initMap">
+</script>
+<script src="../javascript/getCoords.js"></script>
+<script src="../javascript/formObjConst.js"></script>
+<script src="../javascript/localStoreSubmit.js"></script>
 
+<script type="text/javascript" src="../javascript/scrollScripts.js "></script>
 </body>
 
 </html>
