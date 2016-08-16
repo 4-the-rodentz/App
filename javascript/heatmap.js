@@ -42,7 +42,7 @@ function changeGradient() {
 }
 
 
-// Heatmap data 
+// Heatmap data
 function getPoints() {
   return [
     new google.maps.LatLng(45.516410, -122.676450),
