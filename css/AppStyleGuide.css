@@ -56,7 +56,7 @@ footer {
     background-color: #0C3136;
     text-align: right;
     font-family: 'Pathway Gothic One', sans-serif;
-    padding: 10px;
+    padding: 25px 10px;
 }
 footer a {
     color: #F2CC08;
@@ -150,6 +150,30 @@ h3 {
 /*      #ids     */
 /****          ***/
 
+#articleButton {
+    /*width: 200px;*/
+    height: 50px;
+    margin: 10px;
+    align-self: center;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 24px;
+    border: 2px solid #F2CC08;
+    background-color: #124B52;
+    color: #F2CC08;
+    padding: 0 30px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(19, 35, 47, 0.77);
+    -moz-box-shadow:    2px 2px 5px 0px rgba(19, 35, 47, 0.77);
+    box-shadow:         2px 2px 5px 0px rgba(19, 35, 47, 0.77);
+    transition: box-shadow 100ms ease-in-out;
+}
+#articleButton:hover {
+    -webkit-box-shadow: 4px 7px 5px 0px rgba(19, 35, 47, 0.77);
+    -moz-box-shadow:    4px 7px 5px 0px rgba(19, 35, 47, 0.77);
+    box-shadow:         4px 7px 5px 0px rgba(19, 35, 47, 0.77);
+}
 #backgroundOverlay {
     position: fixed;
     z-index: -1;
@@ -168,6 +192,24 @@ h3 {
     -moz-box-shadow:    4px 7px 5px 0px rgba(19, 35, 47, 0.77);
     box-shadow:         4px 7px 5px 0px rgba(19, 35, 47, 0.77);
 }
+
+#images-article article {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+#home-page {
+}
+
+#data-input-page {
+}
+
+#sign-up-page {
+}
+
+#results-page {
+}
+
 
 #header-nav-logo {
     padding-top: 44px;
@@ -229,7 +271,7 @@ h3 {
 }
 
 #observeMonth {
-    margin: 20px 50px 20px 50px; 
+    margin: 20px 50px 20px 50px;
 }
 #submissionForm {
     background: rgba(19, 35, 47, 0.9);
@@ -287,17 +329,110 @@ h3 {
     -moz-border-radius: 5px;
     border-radius: 5px;
 }
-<<<<<<< HEAD
+
 #chartContainer {
   margin: 50px auto 50px auto;
 }
 #seasonalChart {
   margin-top: 425px;
 }
-=======
+
+
+/* Begin-Styles for user sign-up form*/
+
+#new-user-modal {
+  display: none;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background-color: rgba(0,0,0, .6);
+  align-content: center;
+  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+
+#sign-up {
+  z-index: 2;
+  background: rgba(19, 35, 47, 1);
+  width: 90%;
+  height: 100%;
+  margin: 20px auto;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+
+#user-form {
+  font-family: 'Pathway Gothic One', sans-serif;
+  background: rgba(19, 35, 47, 1);
+  font-size: 30px;
+  margin: 50px auto;
+  width: 50%;
+  height: 60%;
+  padding-top: 50px;
+  text-align: center;
+  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#user-form legend {
+  font-size: 40px;
+  color: #F2CC08;
+}
+
+#user-form input {
+  padding: 5px;
+  font-size: 18px;
+  width: 300px;
+}
+
+#user-form select {
+  padding: 10px;
+}
+
+.form-labels {
+  padding: 10px;
+}
+
+.form-warning {
+  font-size: 20px;
+  color: red;
+  font-style: italic;
+  margin: 10px;
+}
+
+#sign-up-submit.sign-up-button {
+  width: 200px;
+  height: 50px;
+  font-weight: bold;
+  font-size: 24px;
+  margin: 25px auto;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+
+#user-greeting {
+  font-family: 'Pathway Gothic One', sans-serif;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 5px;
+  width: 50%;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+#user-form select {
+  margin: 25px;
+  width: 150px;
+  padding: 5px 35px 5px 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  height: 34px;
+}
+/* End-Styles for user sign-up form*/
+
 @media (max-width: 1200px) {
     header {
         background-position: 0 40px;
     }
 }
->>>>>>> d491fe2cfa88e4b7fb2fb9d27355916ed1f3b141

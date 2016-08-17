@@ -61,6 +61,7 @@ function insertLatLng(lat, lng) {
     latDataDrop.value = lat.toFixed(3);
     lngDataDrop.value = lng.toFixed(3);
 }
+
 // Function for storing user-selected latitude and longitude
 function storeUserLatLng() {
   latLngObject = { lat: entryLat, lng: entryLng };
