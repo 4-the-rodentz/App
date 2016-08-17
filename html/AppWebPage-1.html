@@ -9,6 +9,35 @@
   <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Pathway+Gothic+One|Oregano" rel="stylesheet">
 </head>
 <body>
+<div id="newUserModal">
+  <div id="sign-up">
+    <form id="user-form">
+      <fieldset>
+        <legend>Please create a user account</legend>
+        <p id="userName-warning" class="form-warning"></p>
+        <label class="form-labels" id="userName-label" for=userName>Username:</label><br>
+        <input type="text" name=userName class="text-input" id="userName" required autofocus><br>
+        <p id="password-warning" class="form-warning"></p>
+        <label class="form-labels" id="password-label" for="password">Password:</label><br>
+        <input type="password" name="password" class="text-input" id="password" required><br>
+        <p id="email-warning" class="form-warning"></p>
+        <label class="form-labels" id="email-label" for="email">Email:</label><br>
+        <input type="email" name="email" class="text-input" id="email" required><br><br>
+        <label class="form-labels" for="favoriteRodent">Which is your favorite rodent?</label><br>
+        <select name="favoriteRodent" id="favoriteRodent"><br>
+          <option value="mouse">Mouse</option>
+          <option value="vole">Vole</option>
+          <option value="rat">Rat</option>
+          <option value="beaver">Beaver</option>
+        </select><br>
+        <input type="submit" class="sign-up-button" id="sign-up-submit" value="Submit"><br>
+      </fieldset>
+    </form>
+  </div>
+</div>
+
+<script type="text/javascript" src="../javascript/user_constructor.js"></script>
+
 <div id="backgroundOverlay"></div>
 <nav>
   <img id="logo" src="../images/banksy_rat_3117879154_6c3b65efbb.jpg"/>
@@ -31,38 +60,6 @@
 </div>
 
 <p id="user-greeting"></p>
-  <div id="new-user-modal">
-    <div id="sign-up">
-      <form id="user-form">
-        <fieldset>
-          <legend>Please create a user account</legend>
-          <p id="userName-warning" class="form-warning"></p>
-          <label class="form-labels" id="userName-label" for=userName>Username:</label><br>
-          <input type="text" name=userName class="text-input" id="userName" required autofocus><br>
-          <p id="password-warning" class="form-warning"></p>
-          <label class="form-labels" id="password-label" for="password">Password:</label><br>
-          <input type="password" name="password" class="text-input" id="password" required><br>
-          <p id="email-warning" class="form-warning"></p>
-          <label class="form-labels" id="email-label" for="email">Email:</label><br>
-          <input type="email" name="email" class="text-input" id="email" required><br><br>
-          <label class="form-labels" for="favoriteRodent">Which is your favorite rodent?</label><br>
-          <select name="favoriteRodent" id="favoriteRodent"><br>
-            <option value="mouse">Mouse</option>
-            <option value="vole">Vole</option>
-            <option value="rat">Rat</option>
-            <option value="beaver">Beaver</option>
-          </select><br>
-          <input type="submit" class="sign-up-button" id="sign-up-submit" value="Submit"><br>
-        </fieldset>
-      </form>
-    </div>
-  </div>
-
-  <script type="text/javascript" src="../javascript/user_constructor.js"></script>
-
-
-
-
 
 <form id="submissionForm">
   <fieldset>
@@ -94,13 +91,6 @@
       <option value="vole">Vole</option>
       <option value="beaver">Beaver</option>
     </select>
-    <h2>Rodent Size:</h2>
-    <label for="sizeSmall"><img src="../images/size-image1.jpg" height="42"></label>
-    <input type="radio" name="size" value="small" id="sizeSmall">
-    <label for="sizeMedium"><img src="../images/size-image1.jpg" height="62"></label>
-    <input type="radio" name="size" value="medium" id="sizeMedium">
-    <label for="sizeLarge"><img src="../images/size-image1.jpg" height="82"></label>
-    <input type="radio" name="size" value="large" id="sizeLarge">
     <br>
     <button id="formSubmit">Submit</button>
   </fieldset>
