@@ -219,6 +219,7 @@ h3 {
 #results-page {
 }
 
+
 #header-nav-logo {
     padding-top: 44px;
 }
@@ -280,6 +281,12 @@ h3 {
     margin: 10px auto;
 }
 
+<<<<<<< HEAD
+=======
+#observeMonth {
+    margin: 20px 50px 20px 50px;
+}
+>>>>>>> master
 #submissionForm {
     background: rgba(19, 35, 47, 0.9);
     padding: 40px;
@@ -341,6 +348,14 @@ h3 {
     -moz-border-radius: 5px;
     border-radius: 5px;
 }
+
+#chartContainer {
+  margin: 50px auto 50px auto;
+}
+#seasonalChart {
+  margin-top: 425px;
+}
+
 
 /* Begin-Styles for user sign-up form*/
 

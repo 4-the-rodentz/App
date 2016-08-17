@@ -1,11 +1,10 @@
 // test this in the getCoords.html file
 
-
-var DataPoint = function(userName, location, rodentType, size, date, lat, lng, weight){
+var DataPoint = function(userName, location, rodentType, observeMonth, size, lat, lng, weight){
     this.userName = userName;
     this.location = location;
     this.rodentType = rodentType; // 1 thru 4
-    this.date = date;
+    this.observeMonth = observeMonth;
     this.lat = lat;
     this.lng = lng;
     this.heatmapObject = function(lat, lng, weight){
@@ -31,6 +30,6 @@ var locations = [
     new DataPoint('Maddie', (45.52249983770994, -122.63934383770994), "Rat", "feb 10"),
     new DataPoint('Carrie', (45.52249983770994, -122.63934383770994), "Mouse", "jan 1"),
     new DataPoint('Elisabeth', (45.52249983770994, -122.63934383770994), "Mouse", "feb 10"),
-    new DataPoint('Amy', (45.52123383770994, -122.69546583770994), "Beaver", "feb 10")
-    new DataPoint('Caroline', (45.52200783770994, -122.69144283770994), "Beaver", "jan 1"),
+    new DataPoint('Amy', (45.52123383770994, -122.69546583770994), "Beaver", "feb 10"),
+    new DataPoint('Caroline', (45.52200783770994, -122.69144283770994), "Beaver", "jan 1")
 ];
