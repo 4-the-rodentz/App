@@ -4,12 +4,11 @@
 
 body {
     background-color: #F3EDE1;
-    background-image:
-            radial-gradient(circle at 100% 150%, magenta 24%, white 25%, white 28%, silver 29%, silver 36%, white 36%, white 40%, transparent 40%, transparent),
-            radial-gradient(circle at 0 150%, silver 24%, white 25%, white 28%, silver 29%, silver 36%, white 36%, white 40%, transparent 40%, transparent),
-            radial-gradient(circle at 50% 100%, white 10%, silver 11%, silver 23%, white 24%, white 30%, silver 31%, silver 43%, white 44%, white 50%, silver 51%, silver 63%, white 64%, white 71%, transparent 71%, transparent),
-            radial-gradient(circle at 100% 50%, white 5%, silver 6%, silver 15%, white 16%, white 20%, silver 21%, silver 30%, white 31%, white 35%, silver 36%, silver 45%, white 46%, white 49%, transparent 50%, transparent),
-            radial-gradient(circle at 0 50%, white 5%, silver 6%, silver 15%, white 16%, white 20%, silver 21%, silver 30%, white 31%, white 35%, silver 36%, silver 45%, white 46%, white 49%, transparent 50%, transparent);
+    background-image: radial-gradient(circle at 100% 150%, magenta 24%, white 25%, white 28%, silver 29%, silver 36%, white 36%, white 40%, transparent 40%, transparent),
+    radial-gradient(circle at 0 150%, silver 24%, white 25%, white 28%, silver 29%, silver 36%, white 36%, white 40%, transparent 40%, transparent),
+    radial-gradient(circle at 50% 100%, white 10%, silver 11%, silver 23%, white 24%, white 30%, silver 31%, silver 43%, white 44%, white 50%, silver 51%, silver 63%, white 64%, white 71%, transparent 71%, transparent),
+    radial-gradient(circle at 100% 50%, white 5%, silver 6%, silver 15%, white 16%, white 20%, silver 21%, silver 30%, white 31%, white 35%, silver 36%, silver 45%, white 46%, white 49%, transparent 50%, transparent),
+    radial-gradient(circle at 0 50%, white 5%, silver 6%, silver 15%, white 16%, white 20%, silver 21%, silver 30%, white 31%, white 35%, silver 36%, silver 45%, white 46%, white 49%, transparent 50%, transparent);
     background-size: 100px 50px;
     background-attachment: fixed;
     padding: 0;
@@ -29,6 +28,7 @@ header {
     justify-content: center;
     align-items: center;
 }
+
 header h1 {
     display: block;
     font-family: 'Oregano', cursive;
@@ -36,11 +36,13 @@ header h1 {
     color: #F13A30;
     text-shadow: 2px 2px 4px #F2CC08, -2px -2px 4px #F2CC08;
 }
+
 nav img {
     position: absolute;
     left: 50px;
     width: 115px;
 }
+
 #logo {
     /*vertical-align: middle;*/
     /*width: 115px;*/
@@ -58,10 +60,12 @@ footer {
     font-family: 'Pathway Gothic One', sans-serif;
     padding: 25px 10px;
 }
+
 footer a {
     color: #F2CC08;
     font-family: 'Pathway Gothic One', sans-serif;
 }
+
 nav {
     position: fixed;
     display: flex;
@@ -75,12 +79,13 @@ nav ul {
     padding: 0 20px;
     margin: 5px;
 }
+
 nav ul a {
     display: inline-block;
 
     max-width: 240px;
     font-family: 'Pathway Gothic One', sans-serif;
-    border-bottom: 2px solid rgba(0,0,0,0);
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
     font-size: 24px;
     color: #F2CC08;
     font-weight: bold;
@@ -109,7 +114,7 @@ article p {
 }
 
 form {
-    background-color: rgba(126, 130, 122, 0.95);
+    background: rgb(19, 35, 47);
     margin: 20px;
     border-radius: 5px;
     text-align: center;
@@ -165,15 +170,17 @@ h3 {
     -moz-border-radius: 5px;
     border-radius: 5px;
     -webkit-box-shadow: 2px 2px 5px 0px rgba(19, 35, 47, 0.77);
-    -moz-box-shadow:    2px 2px 5px 0px rgba(19, 35, 47, 0.77);
-    box-shadow:         2px 2px 5px 0px rgba(19, 35, 47, 0.77);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(19, 35, 47, 0.77);
+    box-shadow: 2px 2px 5px 0px rgba(19, 35, 47, 0.77);
     transition: box-shadow 100ms ease-in-out;
 }
+
 #articleButton:hover {
     -webkit-box-shadow: 4px 7px 5px 0px rgba(19, 35, 47, 0.77);
-    -moz-box-shadow:    4px 7px 5px 0px rgba(19, 35, 47, 0.77);
-    box-shadow:         4px 7px 5px 0px rgba(19, 35, 47, 0.77);
+    -moz-box-shadow: 4px 7px 5px 0px rgba(19, 35, 47, 0.77);
+    box-shadow: 4px 7px 5px 0px rgba(19, 35, 47, 0.77);
 }
+
 #backgroundOverlay {
     position: fixed;
     z-index: -1;
@@ -187,10 +194,11 @@ h3 {
     justify-content: center;
     align-content: center;
 }
+
 #images-article img {
     -webkit-box-shadow: 4px 7px 5px 0px rgba(19, 35, 47, 0.77);
-    -moz-box-shadow:    4px 7px 5px 0px rgba(19, 35, 47, 0.77);
-    box-shadow:         4px 7px 5px 0px rgba(19, 35, 47, 0.77);
+    -moz-box-shadow: 4px 7px 5px 0px rgba(19, 35, 47, 0.77);
+    box-shadow: 4px 7px 5px 0px rgba(19, 35, 47, 0.77);
 }
 
 #images-article article {
@@ -198,6 +206,7 @@ h3 {
     flex-direction: column;
     text-align: center;
 }
+
 #home-page {
 }
 
@@ -249,16 +258,18 @@ h3 {
     border: 5px solid;
     border-radius: 7px;
     -webkit-box-shadow: 0px 0px 0px 12px rgba(50, 50, 50, 0.5);
-    -moz-box-shadow:    0px 0px 0px 12px rgba(50, 50, 50, 0.5);
-    box-shadow:         0px 0px 0px 12px rgba(50, 50, 50, 0.5);
+    -moz-box-shadow: 0px 0px 0px 12px rgba(50, 50, 50, 0.5);
+    box-shadow: 0px 0px 0px 12px rgba(50, 50, 50, 0.5);
 }
+
 #mapContainer {
     text-align: center;
     height: 500px;
     width: 80%;
     margin: 0 auto;
 }
-#selectAndArea{
+
+#selectAndArea {
     text-align: center;
     background: rgb(19, 35, 47);
     color: #F2CC08;
@@ -279,6 +290,7 @@ h3 {
 #observeMonth {
     margin: 20px 50px 20px 50px;
 }
+
 #submissionForm {
     background: rgba(19, 35, 47, 0.9);
     padding: 40px;
@@ -288,6 +300,7 @@ h3 {
     box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
     color: #F2CC08;
 }
+
 #submissionForm label {
     margin: 10px;
     display: inline-block;
@@ -296,6 +309,7 @@ h3 {
     transition: all 0.25s ease;
     font-size: 22px;
 }
+
 #submissionForm input, #submissionForm textarea {
     margin: 0 auto;
     width: 50%;
@@ -310,11 +324,13 @@ h3 {
     -webkit-transition: border-color .25s ease, box-shadow .25s ease;
     transition: border-color .25s ease, box-shadow .25s ease;
 }
+
 #submissionForm input[type="radio"] {
     margin: 10px;
     display: inline-block;
     width: auto;
 }
+
 #submissionForm select {
     margin: 50px;
     /*background: transparent;*/
@@ -325,6 +341,7 @@ h3 {
     height: 34px;
 
 }
+
 #submissionForm button {
     width: 200px;
     height: 50px;
@@ -346,64 +363,64 @@ h3 {
 
 /* Begin-Styles for user sign-up form*/
 
-#new-user-modal {
-  display: none;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  z-index: 1;
-  background-color: rgba(0,0,0, .6);
-  align-content: center;
-  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+#newUserModal {
+    opacity: 0;
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 10000;
+    background-color: rgba(0, 0, 0, .6);
+    align-content: center;
+    box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+    transition: opacity 500ms ease-in-out;
 }
 
 #sign-up {
-  z-index: 2;
-  background: rgba(19, 35, 47, 1);
-  width: 90%;
-  height: 100%;
-  margin: 20px auto;
-  border-radius: 5px;
-  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+    z-index: 2;
+    width: 50%;
+    height: 75%;
+    margin: 20px auto;
+    border-radius: 5px;
 }
 
 #user-form {
-  font-family: 'Pathway Gothic One', sans-serif;
-  background: rgba(19, 35, 47, 1);
-  font-size: 30px;
-  margin: 50px auto;
-  width: 50%;
-  height: 60%;
-  padding-top: 50px;
-  text-align: center;
-  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
-  color: rgba(255, 255, 255, 0.5);
+    font-family: 'Pathway Gothic One', sans-serif;
+    background: rgb(21, 96, 101);
+    font-size: 25px;
+    margin: 50px auto;
+    width: 50%;
+    padding-top: 50px;
+    text-align: center;
+    box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+    color: rgba(255, 255, 255, 0.5);
 }
 
 #user-form legend {
-  font-size: 40px;
-  color: #F2CC08;
+    font-size: 25px;
+    color: #F2CC08;
 }
 
 #user-form input {
-  padding: 5px;
-  font-size: 18px;
-  width: 300px;
+    padding: 5px;
+    font-size: 18px;
+    width: 300px;
 }
 
 #user-form select {
-  padding: 10px;
+    padding: 10px;
 }
 
 .form-labels {
-  padding: 10px;
+    font-size: 24px;
+    padding: 10px;
 }
 
 .form-warning {
-  font-size: 20px;
-  color: red;
-  font-style: italic;
-  margin: 10px;
+    font-size: 20px;
+    color: red;
+    font-style: italic;
+    margin: 10px;
 }
 
 #sign-up-submit.sign-up-button {
@@ -419,23 +436,28 @@ h3 {
 }
 
 #user-greeting {
-  font-family: 'Pathway Gothic One', sans-serif;
-  text-align: center;
-  background-color: #fff;
-  border-radius: 5px;
-  width: 50%;
-  margin: 10px auto;
-  padding: 10px;
+    font-family: 'Pathway Gothic One', sans-serif;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 5px;
+    width: 50%;
+    margin: 10px auto;
+    padding: 10px;
 }
 
 #user-form select {
-  margin: 25px;
-  width: 150px;
-  padding: 5px 35px 5px 5px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  height: 34px;
+    margin: 25px;
+    width: 150px;
+    padding: 5px 35px 5px 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    height: 34px;
 }
+
+.show {
+    opacity: 1 !important;
+}
+
 /* End-Styles for user sign-up form*/
 
 @media (max-width: 1200px) {

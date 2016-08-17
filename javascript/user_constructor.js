@@ -14,7 +14,7 @@ var passwordWarning = document.getElementById("password-warning");
 var emailWarning = document.getElementById("email-warning");
 
 // DOM queries for changing display values and adding user message
-var signupDisplay = document.getElementById("new-user-modal");
+var signupDisplay = document.getElementById("newUserModal");
 var userGreeting = document.getElementById("selectAndArea");
 
 // DOM queries for form validation
@@ -81,4 +81,17 @@ function newUserAccount(formData) {
   } else {
       document.getElementById("user-form").style.display = "none";
   }
-};
+}
+
+// animations for modal
+
+
+function showBlock(event) {
+    setTimeout(function(){
+        document.getElementById('newUserModal').className += "show";
+    }, 10);
+
+}
+
+
+window.addEventListener("load", showBlock);
