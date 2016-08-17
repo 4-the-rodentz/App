@@ -15,7 +15,7 @@ var emailWarning = document.getElementById("email-warning");
 
 // DOM queries for changing display values and adding user message
 var signupDisplay = document.getElementById("new-user-modal");
-var userGreeting = document.getElementById("user-greeting");
+var userGreeting = document.getElementById("selectAndArea");
 
 // DOM queries for form validation
 var formData = document.getElementById("user-form");
@@ -38,7 +38,7 @@ function checkLocalStorage() {
   } else {
       signupDisplay.style.display = "none";
       userGreeting.style.display = "block";
-      userGreeting.innerHTML = "Hello " + getUserInfo["0"].userName + "! Have you seen a " + getUserInfo["0"].favoriteRodent + " recently?";
+      userGreeting.innerHTML = "Hello " + getUserInfo["0"].userName + "! Have you seen a " + getUserInfo["0"].favoriteRodent + " recently? Select an area where you have seen a rodent";
   }
 };
 
