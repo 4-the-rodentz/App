@@ -192,6 +192,7 @@ h3 {
     -moz-box-shadow:    4px 7px 5px 0px rgba(19, 35, 47, 0.77);
     box-shadow:         4px 7px 5px 0px rgba(19, 35, 47, 0.77);
 }
+
 #images-article article {
     display: flex;
     flex-direction: column;
@@ -209,10 +210,10 @@ h3 {
 #results-page {
 }
 
+
 #header-nav-logo {
     padding-top: 44px;
 }
-
 
 #beaver {
     width: 100%;
@@ -267,6 +268,10 @@ h3 {
     border-radius: 10px;
     width: 80%;
     margin: 10px auto;
+}
+
+#observeMonth {
+    margin: 20px 50px 20px 50px;
 }
 #submissionForm {
     background: rgba(19, 35, 47, 0.9);
@@ -324,6 +329,14 @@ h3 {
     -moz-border-radius: 5px;
     border-radius: 5px;
 }
+
+#chartContainer {
+  margin: 50px auto 50px auto;
+}
+#seasonalChart {
+  margin-top: 425px;
+}
+
 
 /* Begin-Styles for user sign-up form*/
 
