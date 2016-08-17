@@ -327,13 +327,11 @@ h3 {
 
 #submissionForm select {
     margin: 50px;
-    /*background: transparent;*/
     width: 150px;
     padding: 5px 35px 5px 5px;
     font-size: 16px;
     border: 1px solid #ccc;
     height: 34px;
-
 }
 
 #submissionForm button {
@@ -446,7 +444,25 @@ h3 {
     border: 1px solid #ccc;
     height: 34px;
 }
-
+#chartTypeSelector {
+    text-align: center;
+    font-family: 'Pathway Gothic One', sans-serif;
+    background: rgb(21, 96, 101);
+    font-size: 25px;
+    margin: 50px auto;
+    width: 50%;
+    padding: 50px;
+    box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+    color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+}
+#chartType {
+    margin-top:20px;
+    width: 250px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    height: 34px;
+}
 .show {
     opacity: 1 !important;
 }
