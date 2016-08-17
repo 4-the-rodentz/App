@@ -39,7 +39,7 @@ function checkLocalStorage() {
       signupDisplay.style.display = "none";
       userGreeting.style.display = "block";
       userGreeting.setAttribute("class", "selectAndArea-transition");
-      userGreeting.innerHTML = "Hello " + getUserInfo["0"].userName + "! Have you seen a " + getUserInfo["0"].favoriteRodent + " recently?";
+      userGreeting.innerHTML = "Hello " + getUserInfo["0"].userName + "! Have you seen a " + getUserInfo["0"].favoriteRodent + " recently?<br>Please click on the map below to log the location of your rodent sighting.<br>Then select the month when the sighting occurred and the type of rodent that you saw.";
   }
 };
 

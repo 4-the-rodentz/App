@@ -269,7 +269,7 @@ h3 {
     margin: 0 auto;
 }
 
-#selectAndArea{
+#selectAndArea {
     text-align: center;
     background: rgb(19, 35, 47);
     color: #F2CC08;
@@ -281,10 +281,33 @@ h3 {
     margin: 10px auto;
     opacity: 0;
     transition: all .5s;
+    font-family: 'Pathway Gothic One', sans-serif;
     font-size: 30px;
+    line-height: 125%;
 }
 
 #selectAndArea.selectAndArea-transition {
+  opacity: 1;
+}
+
+#userOutputMessage {
+    text-align: center;
+    background: rgb(19, 35, 47);
+    color: #F2CC08;
+    padding: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    width: 80%;
+    margin: 10px auto;
+    opacity: 0;
+    transition: all .5s;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 30px;
+    line-height: 125%;
+}
+
+#userOutputMessage.userOutputMessage-transition {
   opacity: 1;
 }
 
