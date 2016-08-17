@@ -21,9 +21,8 @@ for (var i = 0; i < locations.length; i++) {
       console.log(objMouse);
 }
 
-window.onload = function () {
-  var chart = new CanvasJS.Chart("seasonalChart",
-  {
+function drawStackedBarChart() {
+  var chart = new CanvasJS.Chart("chartContainer", {
     title:{
     text: "Seasonality of Rodent Sightings within the Greater Portland Area"
     },
@@ -60,4 +59,12 @@ window.onload = function () {
     ]
   });
   chart.render();
+}
+
+document.getElementById('chartType').addEventListener("change", choseChartType);
+
+function choseChartType() {
+  if (document.getElementById("chartType").value == "seasonalchart") {
+    drawStackedBarChart();
+  }
 }
