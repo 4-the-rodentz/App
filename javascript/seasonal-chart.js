@@ -53,14 +53,14 @@ window.onload = function () {
       type: "stackedBar",
       legendText: "Beaver",
       showInLegend: "true",
-      dataPoints: rodentSeason
-      // [
-      // { x: new Date(2012, 01, 1), y: 71 },
-      // { x: new Date(2012, 02, 1), y: 55},
-      // { x: new Date(2012, 03, 1), y: 50 },
-      // { x: new Date(2012, 04, 1), y: 65 },
-      // { x: new Date(2012, 05, 1), y: 95 }
-      // ]
+      dataPoints: //rodentSeason
+      [
+      { x: new Date(2012, 01, 1), y: 71 },
+      { x: new Date(2012, 02, 1), y: 55},
+      { x: new Date(2012, 03, 1), y: 50 },
+      { x: new Date(2012, 04, 1), y: 65 },
+      { x: new Date(2012, 05, 1), y: 95 }
+      ]
     },
       {
       type: "stackedBar",
