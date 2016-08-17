@@ -14,7 +14,7 @@ var passwordWarning = document.getElementById("password-warning");
 var emailWarning = document.getElementById("email-warning");
 
 // DOM queries for changing display values and adding user message
-var signupDisplay = document.getElementById("sign-up");
+var signupDisplay = document.getElementById("new-user-modal");
 var userGreeting = document.getElementById("user-greeting");
 
 // DOM queries for form validation
