@@ -219,7 +219,6 @@ h3 {
 #results-page {
 }
 
-
 #header-nav-logo {
     padding-top: 44px;
 }
@@ -348,12 +347,12 @@ h3 {
 }
 
 #chartContainer {
-  margin: 50px auto 50px auto;
-}
-#seasonalChart {
-  margin-top: 425px;
+    margin: 50px auto 50px auto;
 }
 
+#seasonalChart {
+    margin-top: 425px;
+}
 
 /* Begin-Styles for user sign-up form*/
 
@@ -383,7 +382,7 @@ h3 {
     background: rgb(21, 96, 101);
     font-size: 25px;
     margin: 50px auto;
-    padding-top: 50px;
+    padding-top: 10px;
     text-align: center;
     box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
     color: rgba(255, 255, 255, 0.5);
@@ -398,10 +397,17 @@ h3 {
     padding: 5px;
     font-size: 18px;
     width: 300px;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius: 5px;
 }
-
+#user-form input:focus {
+    outline-width: 0;
+    border: 2px solid #F2CC08;
+}
 #user-form select {
     padding: 10px;
+    font-family: 'Pathway Gothic One', sans-serif;
 }
 
 .form-labels {
@@ -421,7 +427,8 @@ h3 {
     height: 50px;
     font-weight: bold;
     font-size: 24px;
-    margin: 25px auto;
+    font-family: 'Pathway Gothic One', sans-serif;
+    margin: 20px auto;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -438,7 +445,7 @@ h3 {
 }
 
 #user-form select {
-    margin: 25px;
+    margin: 20px;
     width: 150px;
     padding: 5px 35px 5px 5px;
     font-size: 16px;
