@@ -67,6 +67,16 @@ function drawPieChart() {
 	});
 	chart.render();
 }
+//
+// drawBarChart();
+// drawPieChart();
+document.getElementById('chartType').addEventListener("change", choseChartType);
 
-drawBarChart();
-drawPieChart();
+function choseChartType() {
+  if (document.getElementById('chartType').value == "piechart") {
+    drawPieChart();
+  }
+  if (document.getElementById("chartType").value == "barchart"){
+    drawBarChart();
+  }
+}
