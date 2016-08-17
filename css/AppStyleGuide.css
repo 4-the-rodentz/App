@@ -114,7 +114,7 @@ article p {
 }
 
 form {
-    background-color: rgba(126, 130, 122, 0.95);
+    background: rgb(19, 35, 47);
     margin: 20px;
     border-radius: 5px;
     text-align: center;
@@ -281,12 +281,10 @@ h3 {
     margin: 10px auto;
 }
 
-<<<<<<< HEAD
-=======
 #observeMonth {
     margin: 20px 50px 20px 50px;
 }
->>>>>>> master
+
 #submissionForm {
     background: rgba(19, 35, 47, 0.9);
     padding: 40px;
@@ -374,21 +372,18 @@ h3 {
 
 #sign-up {
     z-index: 2;
-    background: rgba(19, 35, 47, 1);
     width: 50%;
-    height: 100%;
+    height: 75%;
     margin: 20px auto;
     border-radius: 5px;
-    box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
 }
 
 #user-form {
     font-family: 'Pathway Gothic One', sans-serif;
-    background: rgba(19, 35, 47, 1);
+    background: rgb(21, 96, 101);
     font-size: 25px;
     margin: 50px auto;
     width: 50%;
-    height: 60%;
     padding-top: 50px;
     text-align: center;
     box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
