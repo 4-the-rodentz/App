@@ -1,7 +1,8 @@
 // Retrieve the latitude and longitude from storage
-var retrievedLatLng = localStorage.getItem('latLngObject');
-var parsedLatLng = JSON.parse(retrievedLatLng);
-console.log('retrievedLatLng: ', JSON.parse(retrievedLatLng));
+// var retrievedLatLng = localStorage.getItem('latLngObject');
+// var parsedLatLng = JSON.parse(retrievedLatLng);
+var parsedLatLng = JSON.parse(localStorage.getItem('latLngObject'));  // latLngObject defined in getCoords.js
+// console.log('retrievedLatLng: ', JSON.parse(retrievedLatLng));
 console.log('parsedLatLng: ', parsedLatLng);
 
 var map, heatmap;
