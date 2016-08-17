@@ -9,11 +9,6 @@ document.getElementById('formSubmit').addEventListener('click', function(e){
     localLng = document.getElementById('locationLng').value;
     rodentTypeEl = document.getElementById('rodentType');
     rodentTypeValue = rodentTypeEl.options[rodentTypeEl.selectedIndex].value;
-
-    document.getElementById("formSubmit").addEventListener("click", function(){
-        document.location = "/AppWebPage-2.html";
-    });
-
     // create function to convert data to json format and store in local storage
 
     var forHeatmap = {location: new google.maps.LatLng(localLat, localLng)};
@@ -22,4 +17,5 @@ document.getElementById('formSubmit').addEventListener('click', function(e){
     console.log(JSON.parse(localStorage.getItem('heatMap'))); // testing results
 
     // create a constructor for accessing data from local storage
+    document.location = "../html/AppWebPage-2.html";
 });

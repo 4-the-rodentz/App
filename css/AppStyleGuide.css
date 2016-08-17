@@ -329,10 +329,10 @@ h3 {
 
 #new-user-modal {
   display: none;
-  position: absolute;
+  position: fixed;
   height: 100%;
   width: 100%;
-  z-index: 1;
+  z-index: 10000;
   background-color: rgba(0,0,0, .6);
   align-content: center;
   box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
@@ -341,7 +341,7 @@ h3 {
 #sign-up {
   z-index: 2;
   background: rgba(19, 35, 47, 1);
-  width: 90%;
+  width: 50%;
   height: 100%;
   margin: 20px auto;
   border-radius: 5px;
@@ -351,7 +351,7 @@ h3 {
 #user-form {
   font-family: 'Pathway Gothic One', sans-serif;
   background: rgba(19, 35, 47, 1);
-  font-size: 30px;
+  font-size: 25px;
   margin: 50px auto;
   width: 50%;
   height: 60%;
@@ -362,7 +362,7 @@ h3 {
 }
 
 #user-form legend {
-  font-size: 40px;
+  font-size: 25px;
   color: #F2CC08;
 }
 
@@ -377,6 +377,7 @@ h3 {
 }
 
 .form-labels {
+    font-size: 24px;
   padding: 10px;
 }
 
