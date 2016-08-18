@@ -64,7 +64,7 @@ var mouseFall = 0;
 function beaverSeason() {
     for (var i = 0; i < locations.length; i++) {
         if ((locations[i].rodentType == "Beaver" && locations[i].observeMonth == "January") ||
-            (locations[i].rodentType == "Beaver" && locations[i].observeMonth == "Feburary") ||
+            (locations[i].rodentType == "Beaver" && locations[i].observeMonth == "February") ||
             (locations[i].rodentType == "Beaver" && locations[i].observeMonth == "December")) {
             beaverWinter++
         }
@@ -89,7 +89,7 @@ function beaverSeason() {
 function ratSeason() {
     for (var i = 0; i < locations.length; i++) {
         if ((locations[i].rodentType == "Rat" && locations[i].observeMonth == "January") ||
-            (locations[i].rodentType == "Rat" && locations[i].observeMonth == "Feburary") ||
+            (locations[i].rodentType == "Rat" && locations[i].observeMonth == "February") ||
             (locations[i].rodentType == "Rat" && locations[i].observeMonth == "December")) {
             ratWinter++
         }
@@ -114,7 +114,7 @@ function ratSeason() {
 function voleSeason() {
     for (var i = 0; i < locations.length; i++) {
         if ((locations[i].rodentType == "Vole" && locations[i].observeMonth == "January") ||
-            (locations[i].rodentType == "Vole" && locations[i].observeMonth == "Feburary") ||
+            (locations[i].rodentType == "Vole" && locations[i].observeMonth == "February") ||
             (locations[i].rodentType == "Vole" && locations[i].observeMonth == "December")) {
             voleWinter++
         }
@@ -139,7 +139,7 @@ function voleSeason() {
 function mouseSeason() {
     for (var i = 0; i < locations.length; i++) {
         if ((locations[i].rodentType == "Mouse" && locations[i].observeMonth == "January") ||
-            (locations[i].rodentType == "Mouse" && locations[i].observeMonth == "Feburary") ||
+            (locations[i].rodentType == "Mouse" && locations[i].observeMonth == "February") ||
             (locations[i].rodentType == "Mouse" && locations[i].observeMonth == "December")) {
             mouseWinter++
         }
@@ -161,53 +161,53 @@ function mouseSeason() {
     }
 }
 
-for (var i = 0; i < locations.length; i++) {
-    if (locations[i].rodentType == "Beaver") {
-      beaverMonthCount++;
-      console.log(beaverMonthCount);
-    }
-    var objBeaver = { x: observeMonth, y: beaverMonthCount };
-    if (locations[i].rodentType == "Beaver") {
-      beaverSeason.push(objBeaver); // dataPoints for Beaver input to chart
-      console.log(objBeaver);
-    }
-};
+// for (var i = 0; i < locations.length; i++) {
+//     if (locations[i].rodentType == "Beaver") {
+//       beaverMonthCount++;
+//       console.log(beaverMonthCount);
+//     }
+//     var objBeaver = { x: observeMonth, y: beaverMonthCount };
+//     if (locations[i].rodentType == "Beaver") {
+//       beaverSeason.push(objBeaver); // dataPoints for Beaver input to chart
+//       console.log(objBeaver);
+//     }
+// };
 
-for (var i = 0; i < locations.length; i++) {
-    if (locations[i].rodentType == "Rat") {
-      ratMonthCount++;
-      console.log(ratMonthCount);
-    }
-    var objRat = { x: observeMonth, y: ratMonthCount };
-    if (locations[i].rodentType == 'Rat') {
-      ratSeason.push(objRat); // dataPoints for Rat input to chart
-      console.log(objRat);
-    }
-};
+// for (var i = 0; i < locations.length; i++) {
+//     if (locations[i].rodentType == "Rat") {
+//       ratMonthCount++;
+//       console.log(ratMonthCount);
+//     }
+//     var objRat = { x: observeMonth, y: ratMonthCount };
+//     if (locations[i].rodentType == 'Rat') {
+//       ratSeason.push(objRat); // dataPoints for Rat input to chart
+//       console.log(objRat);
+//     }
+// };
 
-for (var i = 0; i < locations.length; i++) {
-    if (locations[i].rodentType == "Vole") {
-      voleMonthCount++;
-      console.log(voleMonthCount);
-    }
-    var objVole = { x: observeMonth, y: voleMonthCount };
-    if (locations[i].rodentType == 'Vole') {
-      voleSeason.push(objVole); // dataPoints for Vole input to chart
-      console.log(objVole);
-    }
-};
+// for (var i = 0; i < locations.length; i++) {
+//     if (locations[i].rodentType == "Vole") {
+//       voleMonthCount++;
+//       console.log(voleMonthCount);
+//     }
+//     var objVole = { x: observeMonth, y: voleMonthCount };
+//     if (locations[i].rodentType == 'Vole') {
+//       voleSeason.push(objVole); // dataPoints for Vole input to chart
+//       console.log(objVole);
+//     }
+// };
 
-for (var i = 0; i < locations.length; i++) {
-    if (locations[i].rodentType == "Mouse") {
-      mouseMonthCount++;
-      console.log(mouseMonthCount);
-    }
-    var objMouse = { x: observeMonth, y: mouseMonthCount };
-    if (locations[i].rodentType == 'Mouse') {
-      mouseSeason.push(objMouse); // dataPoints for Mouse input to chart
-      console.log(objMouse);
-    }
-}; // end of added by TLS
+// for (var i = 0; i < locations.length; i++) {
+//     if (locations[i].rodentType == "Mouse") {
+//       mouseMonthCount++;
+//       console.log(mouseMonthCount);
+//     }
+//     var objMouse = { x: observeMonth, y: mouseMonthCount };
+//     if (locations[i].rodentType == 'Mouse') {
+//       mouseSeason.push(objMouse); // dataPoints for Mouse input to chart
+//       console.log(objMouse);
+//     }
+// }; // end of added by TLS
 
 
 function drawBarChart() {
@@ -254,42 +254,46 @@ mouseSeason();
     data: [
          {
            type: "stackedBar",
+           legendText: "Spring",
+           showInLegend: "true",
             dataPoints: [
            { label: "Beaver", y: beaverSpring },
            { label: "Rat", y: ratSpring},
            { label: "Vole", y: voleSpring },
            { label: "Mouse", y: mouseSpring },
-
            ]
          },
           {
            type: "stackedBar",
+           legendText: "Summer",
+           showInLegend: "true",
             dataPoints: [
            { label: "Beaver", y: beaverSummer },
            { label: "Rat", y: ratSummer},
            { label: "Vole", y: voleSummer },
            { label: "Mouse", y: mouseSummer },
-
            ]
          },
            {
            type: "stackedBar",
+           legendText: "Fall",
+           showInLegend: "true",
             dataPoints: [
            { label: "Beaver", y: beaverFall },
            { label: "Rat", y: ratFall},
            { label: "Vole", y: voleFall },
            { label: "Mouse", y: mouseFall },
-
            ]
          },
               {
            type: "stackedBar",
+           legendText: "Winter",
+           showInLegend: "true",
             dataPoints: [
            { label: "Beaver", y: beaverWinter },
            { label: "Rat", y: ratWinter},
            { label: "Vole", y: voleWinter },
            { label: "Mouse", y: mouseWinter },
-
            ]
          },
 
