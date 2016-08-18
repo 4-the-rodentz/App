@@ -18,6 +18,11 @@ for (var i = 0; i < locations.length; i++) {
     mouseCount++
   }
 }
+    var localAnimals = JSON.parse(localStorage.getItem('animalCount'));
+    beaverCount += localAnimals.localBeaverCount;
+    ratCount += localAnimals.localRatCount;
+    voleCount += localAnimals.localVoleCount;
+    mouseCount += localAnimals.localMouseCount;
 }
 animalCounts();
 
@@ -29,8 +34,8 @@ function convert() {
   for (var i = 0; i < 4; i++) {
     var newObj = {
       label: locations[i].rodentType,
-      y: animalsArray[i],
-    }
+      y: animalsArray[i]
+    };
 
     newArr.push(newObj);
   }
