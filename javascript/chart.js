@@ -41,39 +41,16 @@ function convert() {
   }
 }
 
-<<<<<<< HEAD
-var beaverSeason = []; // added by TLS
-var ratSeason = [];
-var voleSeason = [];
-var mouseSeason = [];
-var observeMonth = [];
-=======
 var beaverWinter = 0;
 var beaverSpring = 0;
 var beaverSummer = 0;
-var beaverFall = 0; // added by TLS
->>>>>>> master
+var beaverFall = 0;
 
 var voleWinter = 0;
 var voleSpring = 0;
 var voleSummer = 0;
 var voleFall = 0;
 
-<<<<<<< HEAD
-function convertMonth() {
-for (var i = 0; i < locations.length; i++) {
-  if ((locations[i].observeMonth == "January") && (locations[i].observeMonth ==)
-
-  if(locations[i].observeMonth == "January") {
-    observeMonth = new Date(2016, 00, 1);
-  }
-  if(locations[i].observeMonth == "February") {
-    observeMonth = new Date(2016, 01, 1);
-  }
-  if(locations[i].observeMonth == "March") {
-    observeMonth = new Date(2016, 02, 1);
-  }
-=======
 var ratWinter = 0;
 var ratSpring = 0;
 var ratSummer = 0;
@@ -107,7 +84,6 @@ function beaverSeason() {
             beaverFall++
         }
     }
->>>>>>> master
 }
 
 function ratSeason() {
