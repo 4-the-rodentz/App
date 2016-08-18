@@ -503,7 +503,35 @@ h3 {
     opacity: 1 !important;
 }
 
+#sign-up-submit:hover {
+    -webkit-box-shadow: 4px 7px 5px 0px rgba(19, 35, 47, 0.77);
+    -moz-box-shadow: 4px 7px 5px 0px rgba(19, 35, 47, 0.77);
+    box-shadow: 4px 7px 5px 0px rgba(19, 35, 47, 0.77);
+}
 /* End-Styles for user sign-up form*/
+
+#submissionForm button:hover {
+    -webkit-box-shadow: 0px 4px 5px 0px rgba(158, 168, 175, 0.77);
+    -moz-box-shadow: 0px 4px 5px 0px rgba(158, 168, 175, 0.77);
+    box-shadow: 0px 4px 5px 0px rgba(158, 168, 175, 0.77);
+}
+
+#pikaWatch {
+  text-decoration: none;
+}
+
+#pikaWatch:link {
+  color: #124b52;
+}
+
+#pikaWatch:visited {
+  color: #124b52;
+}
+
+#pikaWatch:hover {
+  font-weight: bolder;
+  border-bottom: 2px solid;
+}
 
 @media (max-width: 1200px) {
     header {
