@@ -1,3 +1,4 @@
+// This file is just to scroll the logo out of the screen
 // Create cross browser requestAnimationFrame method:
 window.requestAnimationFrame = window.requestAnimationFrame
     || window.mozRequestAnimationFrame

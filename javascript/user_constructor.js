@@ -14,8 +14,7 @@ var passwordWarning = document.getElementById("password-warning");
 var emailWarning = document.getElementById("email-warning");
 
 // DOM queries for changing display values and adding user message
-var signupDisplay = document.getElementById("new-user-modal");
-var userGreeting = document.getElementById("user-greeting");
+var signupDisplay = document.getElementById("newUserModal");
 
 // DOM queries for form validation
 var formData = document.getElementById("user-form");
@@ -32,13 +31,15 @@ var getUserInfo = JSON.parse(localStorage.getItem("users"));
 
 // Function to change display values of sign-up form and user greeting
 function checkLocalStorage() {
+  var userGreeting = document.getElementById("selectAndArea");
   if (localStorage.getItem("users") == null) {
     signupDisplay.style.display = "block";
     userGreeting.style.display = "none";
   } else {
       signupDisplay.style.display = "none";
       userGreeting.style.display = "block";
-      userGreeting.innerHTML = "Hello " + getUserInfo["0"].userName + "! Have you seen a " + getUserInfo["0"].favoriteRodent + " recently?";
+      userGreeting.setAttribute("class", "selectAndArea-transition");
+      userGreeting.innerHTML = "Hello " + getUserInfo["0"].userName + "! Have you seen a " + getUserInfo["0"].favoriteRodent + " recently?<br>Please click on the map below to log the location of your rodent sighting.<br>Then select the month when the sighting occurred and the type of rodent that you saw.";
   }
 };
 
@@ -79,4 +80,17 @@ function newUserAccount(formData) {
   } else {
       document.getElementById("user-form").style.display = "none";
   }
-};
+}
+
+// animations for modal
+
+
+function showBlock(event) {
+    setTimeout(function(){
+        document.getElementById('newUserModal').className += "show";
+    }, 10);
+
+}
+
+
+window.addEventListener("load", showBlock);
