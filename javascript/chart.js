@@ -18,11 +18,11 @@ for (var i = 0; i < locations.length; i++) {
     mouseCount++
   }
 }
-    var localAnimals = JSON.parse(localStorage.getItem('animalCount'));
-    beaverCount += localAnimals.localBeaverCount;
-    ratCount += localAnimals.localRatCount;
-    voleCount += localAnimals.localVoleCount;
-    mouseCount += localAnimals.localMouseCount;
+    // var localAnimals = JSON.parse(localStorage.getItem('animalCount'));
+    // beaverCount += localAnimals.localBeaverCount;
+    // ratCount += localAnimals.localRatCount;
+    // voleCount += localAnimals.localVoleCount;
+    // mouseCount += localAnimals.localMouseCount;
 }
 animalCounts();
 
@@ -161,54 +161,6 @@ function mouseSeason() {
     }
 }
 
-
-for (var i = 0; i < locations.length; i++) {
-    var objBeaver = { x: observeMonth, y: beaverCount };
-    if (locations[i].rodentType == "Beaver") {
-      beaverSeason.push(objBeaver); // dataPoints for Beaver input to chart
-      console.log(objBeaver);
-    }
-};
-
-for (var i = 0; i < locations.length; i++) {
-    if (locations[i].rodentType == "Rat") {
-      ratCount++;
-      console.log(ratCount);
-    }
-    var objRat = { x: observeMonth, y: ratCount };
-    if (locations[i].rodentType == 'Rat') {
-      ratSeason.push(objRat); // dataPoints for Rat input to chart
-      console.log(objRat);
-    }
-};
-
-for (var i = 0; i < locations.length; i++) {
-    if (locations[i].rodentType == "Vole") {
-      voleCount++;
-      console.log(voleCount);
-    }
-    var objVole = { x: observeMonth, y: voleCount };
-    if (locations[i].rodentType == 'Vole') {
-      voleSeason.push(objVole); // dataPoints for Vole input to chart
-      console.log(objVole);
-    }
-};
-
-for (var i = 0; i < locations.length; i++) {
-    if (locations[i].rodentType == "Mouse") {
-      mouseCount++;
-      console.log(mouseMonthCount);
-    }
-    var objMouse = { x: observeMonth, y: mouseCount };
-    if (locations[i].rodentType == 'Mouse') {
-      mouseSeason.push(objMouse); // dataPoints for Mouse input to chart
-      console.log(objMouse);
-    }
-}; // end of added by TLS
-
-
-
-
 function drawBarChart() {
   convert();
 	var chart = new CanvasJS.Chart("chartContainer", {
@@ -301,7 +253,6 @@ mouseSeason();
 
        chart.render();
      }
-
 
 //
 // drawBarChart();
