@@ -61,7 +61,7 @@ function drawStackedBarChart() {
   chart.render();
 }
 
-document.getElementById('chartType').addEventListener("change", choseChartType);
+// document.getElementById('chartType').addEventListener("change", choseChartType);
 
 function choseChartType() {
   if (document.getElementById("chartType").value == "seasonalchart") {
