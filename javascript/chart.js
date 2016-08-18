@@ -18,6 +18,11 @@ for (var i = 0; i < locations.length; i++) {
     mouseCount++
   }
 }
+    var localAnimals = JSON.parse(localStorage.getItem('animalCount'));
+    beaverCount += localAnimals.localBeaverCount;
+    ratCount += localAnimals.localRatCount;
+    voleCount += localAnimals.localVoleCount;
+    mouseCount += localAnimals.localMouseCount;
 }
 animalCounts();
 
@@ -29,20 +34,32 @@ function convert() {
   for (var i = 0; i < 4; i++) {
     var newObj = {
       label: locations[i].rodentType,
-      y: animalsArray[i],
-    }
+      y: animalsArray[i]
+    };
 
     newArr.push(newObj);
   }
 }
 
+<<<<<<< HEAD
 var beaverSeason = []; // added by TLS
 var ratSeason = [];
 var voleSeason = [];
 var mouseSeason = [];
 var observeMonth = [];
+=======
+var beaverWinter = 0;
+var beaverSpring = 0;
+var beaverSummer = 0;
+var beaverFall = 0; // added by TLS
+>>>>>>> master
 
+var voleWinter = 0;
+var voleSpring = 0;
+var voleSummer = 0;
+var voleFall = 0;
 
+<<<<<<< HEAD
 function convertMonth() {
 for (var i = 0; i < locations.length; i++) {
   if ((locations[i].observeMonth == "January") && (locations[i].observeMonth ==)
@@ -56,10 +73,117 @@ for (var i = 0; i < locations.length; i++) {
   if(locations[i].observeMonth == "March") {
     observeMonth = new Date(2016, 02, 1);
   }
-}
+=======
+var ratWinter = 0;
+var ratSpring = 0;
+var ratSummer = 0;
+var ratFall = 0;
+
+var mouseWinter = 0;
+var mouseSpring = 0;
+var mouseSummer = 0;
+var mouseFall = 0;
+
+function beaverSeason() {
+    for (var i = 0; i < locations.length; i++) {
+        if ((locations[i].rodentType == "Beaver" && locations[i].observeMonth == "January") ||
+            (locations[i].rodentType == "Beaver" && locations[i].observeMonth == "Feburary") ||
+            (locations[i].rodentType == "Beaver" && locations[i].observeMonth == "December")) {
+            beaverWinter++
+        }
+        if ((locations[i].rodentType == "Beaver" && locations[i].observeMonth == "March") ||
+            (locations[i].rodentType == "Beaver" && locations[i].observeMonth == "April") ||
+            (locations[i].rodentType == "Beaver" && locations[i].observeMonth == "May")) {
+            beaverSpring++
+        }
+        if ((locations[i].rodentType == "Beaver" && locations[i].observeMonth == "July") ||
+            (locations[i].rodentType == "Beaver" && locations[i].observeMonth == "August") ||
+            (locations[i].rodentType == "Beaver" && locations[i].observeMonth == "June")) {
+            beaverSummer++
+        }
+        if ((locations[i].rodentType == "Beaver" && locations[i].observeMonth == "September") ||
+            (locations[i].rodentType == "Beaver" && locations[i].observeMonth == "October") ||
+            (locations[i].rodentType == "Beaver" && locations[i].observeMonth == "November")) {
+            beaverFall++
+        }
+    }
+>>>>>>> master
 }
 
-convertMonth();
+function ratSeason() {
+    for (var i = 0; i < locations.length; i++) {
+        if ((locations[i].rodentType == "Rat" && locations[i].observeMonth == "January") ||
+            (locations[i].rodentType == "Rat" && locations[i].observeMonth == "Feburary") ||
+            (locations[i].rodentType == "Rat" && locations[i].observeMonth == "December")) {
+            ratWinter++
+        }
+        if ((locations[i].rodentType == "Rat" && locations[i].observeMonth == "March") ||
+            (locations[i].rodentType == "Rat" && locations[i].observeMonth == "April") ||
+            (locations[i].rodentType == "Rat" && locations[i].observeMonth == "May")) {
+            ratSpring++
+        }
+        if ((locations[i].rodentType == "Rat" && locations[i].observeMonth == "July") ||
+            (locations[i].rodentType == "Rat" && locations[i].observeMonth == "August") ||
+            (locations[i].rodentType == "Rat" && locations[i].observeMonth == "June")) {
+            ratSummer++
+        }
+        if ((locations[i].rodentType == "Rat" && locations[i].observeMonth == "September") ||
+            (locations[i].rodentType == "Rat" && locations[i].observeMonth == "October") ||
+            (locations[i].rodentType == "Rat" && locations[i].observeMonth == "November")) {
+            ratFall++
+        }
+    }
+}
+
+function voleSeason() {
+    for (var i = 0; i < locations.length; i++) {
+        if ((locations[i].rodentType == "Vole" && locations[i].observeMonth == "January") ||
+            (locations[i].rodentType == "Vole" && locations[i].observeMonth == "Feburary") ||
+            (locations[i].rodentType == "Vole" && locations[i].observeMonth == "December")) {
+            voleWinter++
+        }
+        if ((locations[i].rodentType == "Vole" && locations[i].observeMonth == "March") ||
+            (locations[i].rodentType == "Vole" && locations[i].observeMonth == "April") ||
+            (locations[i].rodentType == "Vole" && locations[i].observeMonth == "May")) {
+            voleSpring++
+        }
+        if ((locations[i].rodentType == "Vole" && locations[i].observeMonth == "July") ||
+            (locations[i].rodentType == "Vole" && locations[i].observeMonth == "August") ||
+            (locations[i].rodentType == "Vole" && locations[i].observeMonth == "June")) {
+            voleSummer++
+        }
+        if ((locations[i].rodentType == "Vole" && locations[i].observeMonth == "September") ||
+            (locations[i].rodentType == "Vole" && locations[i].observeMonth == "October") ||
+            (locations[i].rodentType == "Vole" && locations[i].observeMonth == "November")) {
+            voleFall++
+        }
+    }
+}
+
+function mouseSeason() {
+    for (var i = 0; i < locations.length; i++) {
+        if ((locations[i].rodentType == "Mouse" && locations[i].observeMonth == "January") ||
+            (locations[i].rodentType == "Mouse" && locations[i].observeMonth == "Feburary") ||
+            (locations[i].rodentType == "Mouse" && locations[i].observeMonth == "December")) {
+            mouseWinter++
+        }
+        if ((locations[i].rodentType == "Mouse" && locations[i].observeMonth == "March") ||
+            (locations[i].rodentType == "Mouse" && locations[i].observeMonth == "April") ||
+            (locations[i].rodentType == "Mouse" && locations[i].observeMonth == "May")) {
+            mouseSpring++
+        }
+        if ((locations[i].rodentType == "Mouse" && locations[i].observeMonth == "July") ||
+            (locations[i].rodentType == "Mouse" && locations[i].observeMonth == "August") ||
+            (locations[i].rodentType == "Mouse" && locations[i].observeMonth == "June")) {
+            mouseSummer++
+        }
+        if ((locations[i].rodentType == "Mouse" && locations[i].observeMonth == "September") ||
+            (locations[i].rodentType == "Mouse" && locations[i].observeMonth == "October") ||
+            (locations[i].rodentType == "Mouse" && locations[i].observeMonth == "November")) {
+            mouseFall++
+        }
+    }
+}
 
 for (var i = 0; i < locations.length; i++) {
     var objBeaver = { x: observeMonth, y: beaverCount };
