@@ -18,11 +18,11 @@ for (var i = 0; i < locations.length; i++) {
     mouseCount++
   }
 }
-    var localAnimals = JSON.parse(localStorage.getItem('animalCount'));
-    beaverCount += localAnimals.localBeaverCount;
-    ratCount += localAnimals.localRatCount;
-    voleCount += localAnimals.localVoleCount;
-    mouseCount += localAnimals.localMouseCount;
+    // var localAnimals = JSON.parse(localStorage.getItem('animalCount'));
+    // beaverCount += localAnimals.localBeaverCount;
+    // ratCount += localAnimals.localRatCount;
+    // voleCount += localAnimals.localVoleCount;
+    // mouseCount += localAnimals.localMouseCount;
 }
 animalCounts();
 
@@ -44,7 +44,7 @@ function convert() {
 var beaverWinter = 0;
 var beaverSpring = 0;
 var beaverSummer = 0;
-var beaverFall = 0; // added by TLS
+var beaverFall = 0;
 
 var voleWinter = 0;
 var voleSpring = 0;

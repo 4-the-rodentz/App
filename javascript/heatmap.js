@@ -1,20 +1,19 @@
-// Retrieve the latitude and longitude from storage
-var retrievedLatLng = localStorage.getItem('latLngObject');
-var parsedLatLng = JSON.parse(retrievedLatLng);
-console.log('retrievedLatLng: ', JSON.parse(retrievedLatLng));
-console.log('parsedLatLng: ', parsedLatLng);
+// latLngObject defined in getCoords.js
+var parsedLatLng = JSON.parse(localStorage.getItem('latLngObject'));
 
+// Defined in Google API
 var map, heatmap;
 
+// Function called by Google Maps API for rendering heatmap with custom zoom and center settings
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 13,  // Sets the initial zoom level on load
-    center: {lat: 45.512, lng: -122.668},  // Centers map around east side of Hawthorne Bridge
-    mapTypeId: 'roadmap'
+    zoom: 13,                              // sets the initial zoom level on load
+    center: {lat: 45.512, lng: -122.668},  // centers map around east side of Hawthorne Bridge
+    mapTypeId: 'roadmap'                   // sets appearance of map
   });
 
   heatmap = new google.maps.visualization.HeatmapLayer({
-    data: getPoints(),
+    data: getPoints(),                     // calls function holding heatmap data 
     map: map,
     radius: 30  // Size of heatmap points range 0-50, 30 best for 4-the-rodentz
   });
@@ -42,9 +41,10 @@ function changeGradient() {
 }
 
 
-// Heatmap data 
+// Heatmap data
 function getPoints() {
-  return [
+  var pointArray = [
+    // Hardcoded entries
     new google.maps.LatLng(45.516410, -122.676450),
     new google.maps.LatLng(45.516330, -122.676490),
     new google.maps.LatLng(45.516390, -122.676510),
@@ -109,6 +109,11 @@ function getPoints() {
     new google.maps.LatLng(45.514580, -122.595060),
     new google.maps.LatLng(45.515260, -122.596900),
     new google.maps.LatLng(45.511830, -122.595900),
-    new google.maps.LatLng(parsedLatLng.lat, parsedLatLng.lng) // variable data from getCoords.js
   ];
+    // 4 The Rodentz user created entries
+    for (var i = 0; i < locData.length; i+=2 ) {  // locData from localStorage loc_key_data key
+      var forLocationPush = new google.maps.LatLng(locData[i], locData[i+1]);
+      pointArray.push(forLocationPush);
+    }
+  return pointArray;
 }
