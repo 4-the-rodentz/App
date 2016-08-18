@@ -22,14 +22,14 @@ var DataPoint = function(userName, location, rodentType, observeMonth, size, lat
 // });
 
 var locations = [
-    new DataPoint('Jon', (45.531605383770994, -122.66063690185547), "Beaver", "jan 1"),
-    new DataPoint('Dave', (45.531605383770994, -122.66063690185547), "Rat", "feb 10"),
-    new DataPoint('Karen', (45.51999283770994, -122.67762483770994), "Vole", "jan 1"),
-    new DataPoint('Susan', (45.51189983770994, -122.62550383770994), "Mouse", "feb 10"),
-    new DataPoint('Jane', (45.51442183770994, -122.63226283770994), "Vole", "jan 1"),
-    new DataPoint('Maddie', (45.52249983770994, -122.63934383770994), "Rat", "feb 10"),
-    new DataPoint('Carrie', (45.52249983770994, -122.63934383770994), "Mouse", "jan 1"),
-    new DataPoint('Elisabeth', (45.52249983770994, -122.63934383770994), "Mouse", "feb 10"),
-    new DataPoint('Amy', (45.52123383770994, -122.69546583770994), "Beaver", "feb 10"),
-    new DataPoint('Caroline', (45.52200783770994, -122.69144283770994), "Beaver", "jan 1")
+    new DataPoint('Jon', (45.531605383770994, -122.66063690185547), "Beaver", "January"),
+    new DataPoint('Dave', (45.531605383770994, -122.66063690185547), "Rat", "January"),
+    new DataPoint('Karen', (45.51999283770994, -122.67762483770994), "Vole", "February"),
+    new DataPoint('Susan', (45.51189983770994, -122.62550383770994), "Mouse", "January"),
+    new DataPoint('Jane', (45.51442183770994, -122.63226283770994), "Vole", "March"),
+    new DataPoint('Maddie', (45.52249983770994, -122.63934383770994), "Rat", "February"),
+    new DataPoint('Carrie', (45.52249983770994, -122.63934383770994), "Mouse", "January"),
+    new DataPoint('Elisabeth', (45.52249983770994, -122.63934383770994), "Mouse", "February"),
+    new DataPoint('Amy', (45.52123383770994, -122.69546583770994), "Beaver", "January"),
+    new DataPoint('Caroline', (45.52200783770994, -122.69144283770994), "Beaver", "February")
 ];
