@@ -263,46 +263,62 @@ function drawPieChart() {
 }
 
 function drawStackedBarChart() { // added by TLS
+beaverSeason();
+ratSeason();
+voleSeason();
+mouseSeason();
   var chart = new CanvasJS.Chart("chartContainer", {
     title:{
     text: "Seasonality of Rodent Sightings within the Greater Portland Area"
     },
-
-    axisX: {
-      valueFormatString: "MMM",
-      interval: 1,
-      intervalType: "month"
-    },
-
     data: [
-    {
-      type: "stackedBar",
-      legendText: "Beaver",
-      showInLegend: "true",
-      dataPoints: beaverSeason
-    },
-      {
-      type: "stackedBar",
-      legendText: "Rat",
-      showInLegend: "true",
-      dataPoints: ratSeason
-    },
-      {
-      type: "stackedBar",
-      legendText: "Vole",
-      showInLegend: "true",
-      dataPoints: voleSeason
-    },
-      {
-      type: "stackedBar",
-      legendText: "Mouse",
-      showInLegend: "true",
-      dataPoints: mouseSeason
-    },
-    ]
-  });
-  chart.render();
-} // end of added by TLS
+         {
+           type: "stackedBar",
+            dataPoints: [
+           { label: "Beaver", y: beaverSpring },
+           { label: "Rat", y: ratSpring},
+           { label: "Vole", y: voleSpring },
+           { label: "Mouse", y: mouseSpring },
+
+           ]
+         },
+          {
+           type: "stackedBar",
+            dataPoints: [
+           { label: "Beaver", y: beaverSummer },
+           { label: "Rat", y: ratSummer},
+           { label: "Vole", y: voleSummer },
+           { label: "Mouse", y: mouseSummer },
+
+           ]
+         },
+           {
+           type: "stackedBar",
+            dataPoints: [
+           { label: "Beaver", y: beaverFall },
+           { label: "Rat", y: ratFall},
+           { label: "Vole", y: voleFall },
+           { label: "Mouse", y: mouseFall },
+
+           ]
+         },
+              {
+           type: "stackedBar",
+            dataPoints: [
+           { label: "Beaver", y: beaverWinter },
+           { label: "Rat", y: ratWinter},
+           { label: "Vole", y: voleWinter },
+           { label: "Mouse", y: mouseWinter },
+
+           ]
+         },
+
+         ]
+       });
+
+       chart.render();
+     }
+
 
 //
 // drawBarChart();
