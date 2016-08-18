@@ -219,7 +219,6 @@ h3 {
 #results-page {
 }
 
-
 #header-nav-logo {
     padding-top: 44px;
 }
@@ -279,6 +278,36 @@ h3 {
     border-radius: 10px;
     width: 80%;
     margin: 10px auto;
+    opacity: 0;
+    transition: all .5s;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 30px;
+    line-height: 125%;
+}
+
+#selectAndArea.selectAndArea-transition {
+  opacity: 1;
+}
+
+#userOutputMessage {
+    text-align: center;
+    background: rgb(19, 35, 47);
+    color: #F2CC08;
+    padding: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    width: 80%;
+    margin: 10px auto;
+    opacity: 0;
+    transition: all .5s;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 30px;
+    line-height: 125%;
+}
+
+#userOutputMessage.userOutputMessage-transition {
+  opacity: 1;
 }
 
 #observeMonth {
@@ -327,13 +356,11 @@ h3 {
 
 #submissionForm select {
     margin: 50px;
-    /*background: transparent;*/
     width: 150px;
     padding: 5px 35px 5px 5px;
     font-size: 16px;
     border: 1px solid #ccc;
     height: 34px;
-
 }
 
 #submissionForm button {
@@ -348,12 +375,12 @@ h3 {
 }
 
 #chartContainer {
-  margin: 50px auto 50px auto;
-}
-#seasonalChart {
-  margin-top: 425px;
+    margin: 50px auto 50px auto;
 }
 
+#seasonalChart {
+    margin-top: 425px;
+}
 
 /* Begin-Styles for user sign-up form*/
 
@@ -383,8 +410,7 @@ h3 {
     background: rgb(21, 96, 101);
     font-size: 25px;
     margin: 50px auto;
-    width: 50%;
-    padding-top: 50px;
+    padding-top: 10px;
     text-align: center;
     box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
     color: rgba(255, 255, 255, 0.5);
@@ -399,10 +425,17 @@ h3 {
     padding: 5px;
     font-size: 18px;
     width: 300px;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius: 5px;
 }
-
+#user-form input:focus {
+    outline-width: 0;
+    border: 2px solid #F2CC08;
+}
 #user-form select {
     padding: 10px;
+    font-family: 'Pathway Gothic One', sans-serif;
 }
 
 .form-labels {
@@ -422,7 +455,8 @@ h3 {
     height: 50px;
     font-weight: bold;
     font-size: 24px;
-    margin: 25px auto;
+    font-family: 'Pathway Gothic One', sans-serif;
+    margin: 20px auto;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -439,14 +473,32 @@ h3 {
 }
 
 #user-form select {
-    margin: 25px;
+    margin: 20px;
     width: 150px;
     padding: 5px 35px 5px 5px;
     font-size: 16px;
     border: 1px solid #ccc;
     height: 34px;
 }
-
+#chartTypeSelector {
+    text-align: center;
+    font-family: 'Pathway Gothic One', sans-serif;
+    background: rgb(21, 96, 101);
+    font-size: 25px;
+    margin: 50px auto;
+    width: 50%;
+    padding: 50px;
+    box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+    color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+}
+#chartType {
+    margin-top:20px;
+    width: 250px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    height: 34px;
+}
 .show {
     opacity: 1 !important;
 }
