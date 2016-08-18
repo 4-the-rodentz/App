@@ -64,7 +64,7 @@ var mouseFall = 0;
 function beaverSeason() {
     for (var i = 0; i < locations.length; i++) {
         if ((locations[i].rodentType == "Beaver" && locations[i].observeMonth == "January") ||
-            (locations[i].rodentType == "Beaver" && locations[i].observeMonth == "Feburary") ||
+            (locations[i].rodentType == "Beaver" && locations[i].observeMonth == "February") ||
             (locations[i].rodentType == "Beaver" && locations[i].observeMonth == "December")) {
             beaverWinter++
         }
@@ -89,7 +89,7 @@ function beaverSeason() {
 function ratSeason() {
     for (var i = 0; i < locations.length; i++) {
         if ((locations[i].rodentType == "Rat" && locations[i].observeMonth == "January") ||
-            (locations[i].rodentType == "Rat" && locations[i].observeMonth == "Feburary") ||
+            (locations[i].rodentType == "Rat" && locations[i].observeMonth == "February") ||
             (locations[i].rodentType == "Rat" && locations[i].observeMonth == "December")) {
             ratWinter++
         }
@@ -114,7 +114,7 @@ function ratSeason() {
 function voleSeason() {
     for (var i = 0; i < locations.length; i++) {
         if ((locations[i].rodentType == "Vole" && locations[i].observeMonth == "January") ||
-            (locations[i].rodentType == "Vole" && locations[i].observeMonth == "Feburary") ||
+            (locations[i].rodentType == "Vole" && locations[i].observeMonth == "February") ||
             (locations[i].rodentType == "Vole" && locations[i].observeMonth == "December")) {
             voleWinter++
         }
@@ -139,7 +139,7 @@ function voleSeason() {
 function mouseSeason() {
     for (var i = 0; i < locations.length; i++) {
         if ((locations[i].rodentType == "Mouse" && locations[i].observeMonth == "January") ||
-            (locations[i].rodentType == "Mouse" && locations[i].observeMonth == "Feburary") ||
+            (locations[i].rodentType == "Mouse" && locations[i].observeMonth == "February") ||
             (locations[i].rodentType == "Mouse" && locations[i].observeMonth == "December")) {
             mouseWinter++
         }
@@ -243,16 +243,65 @@ function drawPieChart() {
 }
 
 function drawStackedBarChart() { // added by TLS
+beaverSeason();
+ratSeason();
+voleSeason();
+mouseSeason();
   var chart = new CanvasJS.Chart("chartContainer", {
     title:{
     text: "Seasonality of Rodent Sightings within the Greater Portland Area"
     },
+    data: [
+         {
+           type: "stackedBar",
+           legendText: "Spring",
+           showInLegend: "true",
+            dataPoints: [
+           { label: "Beaver", y: beaverSpring },
+           { label: "Rat", y: ratSpring},
+           { label: "Vole", y: voleSpring },
+           { label: "Mouse", y: mouseSpring },
+           ]
+         },
+          {
+           type: "stackedBar",
+           legendText: "Summer",
+           showInLegend: "true",
+            dataPoints: [
+           { label: "Beaver", y: beaverSummer },
+           { label: "Rat", y: ratSummer},
+           { label: "Vole", y: voleSummer },
+           { label: "Mouse", y: mouseSummer },
+           ]
+         },
+           {
+           type: "stackedBar",
+           legendText: "Fall",
+           showInLegend: "true",
+            dataPoints: [
+           { label: "Beaver", y: beaverFall },
+           { label: "Rat", y: ratFall},
+           { label: "Vole", y: voleFall },
+           { label: "Mouse", y: mouseFall },
+           ]
+         },
+              {
+           type: "stackedBar",
+           legendText: "Winter",
+           showInLegend: "true",
+            dataPoints: [
+           { label: "Beaver", y: beaverWinter },
+           { label: "Rat", y: ratWinter},
+           { label: "Vole", y: voleWinter },
+           { label: "Mouse", y: mouseWinter },
+           ]
+         },
 
-    axisX: {
-      valueFormatString: "MMM",
-      interval: 1,
-      intervalType: "month"
-    },
+         ]
+       });
+
+       chart.render();
+     }
 
     data: [
     {
@@ -290,7 +339,7 @@ function drawStackedBarChart() { // added by TLS
 document.getElementById('chartType').addEventListener("change", choseChartType);
 
 function choseChartType() {
-  if (document.getElementById('chartType').value == "piechart") {
+  if (document.getElementById("chartType").value == "piechart") {
     drawPieChart();
   }
   if (document.getElementById("chartType").value == "barchart"){
@@ -304,4 +353,3 @@ function choseChartType() {
   if (document.getElementById("chartType").value == "seasonalchart") { // added by TLS
     drawStackedBarChart();
   } // end of added by TLS
-
