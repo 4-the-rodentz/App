@@ -8,8 +8,7 @@ function initMap() {
 
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 13,
-        center: {lat: 45.512, lng: -122.668},
-        disableDefaultUI: true
+        center: {lat: 45.512, lng: -122.668}
     });
 
     // Google maps has an 'addListener' method that you can call on the returned map after calling the above.

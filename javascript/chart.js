@@ -84,4 +84,7 @@ function choseChartType() {
   if (document.getElementById("chartType").value == "barchart"){
     drawBarChart();
   }
+
+  // animate the chart into view
+    document.getElementById('chartContainer').style.height = '500px';
 }
