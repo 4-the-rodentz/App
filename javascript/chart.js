@@ -161,55 +161,6 @@ function mouseSeason() {
     }
 }
 
-// for (var i = 0; i < locations.length; i++) {
-//     if (locations[i].rodentType == "Beaver") {
-//       beaverMonthCount++;
-//       console.log(beaverMonthCount);
-//     }
-//     var objBeaver = { x: observeMonth, y: beaverMonthCount };
-//     if (locations[i].rodentType == "Beaver") {
-//       beaverSeason.push(objBeaver); // dataPoints for Beaver input to chart
-//       console.log(objBeaver);
-//     }
-// };
-
-// for (var i = 0; i < locations.length; i++) {
-//     if (locations[i].rodentType == "Rat") {
-//       ratMonthCount++;
-//       console.log(ratMonthCount);
-//     }
-//     var objRat = { x: observeMonth, y: ratMonthCount };
-//     if (locations[i].rodentType == 'Rat') {
-//       ratSeason.push(objRat); // dataPoints for Rat input to chart
-//       console.log(objRat);
-//     }
-// };
-
-// for (var i = 0; i < locations.length; i++) {
-//     if (locations[i].rodentType == "Vole") {
-//       voleMonthCount++;
-//       console.log(voleMonthCount);
-//     }
-//     var objVole = { x: observeMonth, y: voleMonthCount };
-//     if (locations[i].rodentType == 'Vole') {
-//       voleSeason.push(objVole); // dataPoints for Vole input to chart
-//       console.log(objVole);
-//     }
-// };
-
-// for (var i = 0; i < locations.length; i++) {
-//     if (locations[i].rodentType == "Mouse") {
-//       mouseMonthCount++;
-//       console.log(mouseMonthCount);
-//     }
-//     var objMouse = { x: observeMonth, y: mouseMonthCount };
-//     if (locations[i].rodentType == 'Mouse') {
-//       mouseSeason.push(objMouse); // dataPoints for Mouse input to chart
-//       console.log(objMouse);
-//     }
-// }; // end of added by TLS
-
-
 function drawBarChart() {
   convert();
 	var chart = new CanvasJS.Chart("chartContainer", {
@@ -310,7 +261,7 @@ mouseSeason();
 document.getElementById('chartType').addEventListener("change", choseChartType);
 
 function choseChartType() {
-  if (document.getElementById('chartType').value == "piechart") {
+  if (document.getElementById("chartType").value == "piechart") {
     drawPieChart();
   }
   if (document.getElementById("chartType").value == "barchart"){
