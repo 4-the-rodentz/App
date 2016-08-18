@@ -31,7 +31,7 @@ function initMap() {
 
         // functions to store and pass lat and lang
         placeMarker(e.latLng, map);
-        // insertLatLng(lat, lng);
+        insertLatLng(lat, lng);
 
         // add function to create an array of objects to local storage
 
