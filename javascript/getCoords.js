@@ -1,6 +1,7 @@
-var entryLat;     // for holding user's latitude click
-var entryLng;     // for holding user's longitude click
-var latLngObject; // object build with entryLat and entryLng variables
+var entryLat;       // for holding user's latitude click
+var entryLng;       // for holding user's longitude click
+var latLngObject;   // object build with entryLat and entryLng variables
+var locDataArray;  // keep array of aggregated coordinate entries
 
 // test this in the getCoords.html file
 
@@ -17,8 +18,8 @@ function initMap() {
 
     map.addListener('click', function(e) {
         // placeMarkerAndPanTo(e.latLng, map);
-        console.log(e.latLng.lat());
-        console.log(e.latLng.lng());
+        // console.log(e.latLng.lat());
+        // console.log(e.latLng.lng());
         var lat = e.latLng.lat();
         var lng = e.latLng.lng();
 
@@ -29,9 +30,12 @@ function initMap() {
         // Call this function for storing user-selected latitude and longitude
         storeUserLatLng();
 
+        // Call this function for storing to localStorage with key loc_key_data
+        locStoreUserLatLng();
+
         // functions to store and pass lat and lang
         placeMarker(e.latLng, map);
-        insertLatLng(lat, lng);
+        // insertLatLng(lat, lng);
 
         // add function to create an array of objects to local storage
 
@@ -49,21 +53,42 @@ function placeMarker(latLng, map) {
 
 // insert lat and lng into text field
 
-var latDataDrop = document.getElementById('locationLat');
-var lngDataDrop = document.getElementById('locationLng');
-latDataDrop.disabled = true; // this disables the ability to edit the field. They will have to click the map
-latDataDrop.disabled = true;
-latDataDrop.readOnly = true;// this disables the ability to highlight the text field
-lngDataDrop.readOnly = true;
-
-// this function inserts the lat and lng values set by above map.addListener method
-function insertLatLng(lat, lng) {
-    latDataDrop.value = lat.toFixed(3);
-    lngDataDrop.value = lng.toFixed(3);
-}
+// var latDataDrop = document.getElementById('locationLat');
+// var lngDataDrop = document.getElementById('locationLng');
+// latDataDrop.disabled = true; // this disables the ability to edit the field. They will have to click the map
+// latDataDrop.disabled = true;
+// latDataDrop.readOnly = true;// this disables the ability to highlight the text field
+// lngDataDrop.readOnly = true;
+//
+// // this function inserts the lat and lng values set by above map.addListener method
+// function insertLatLng(lat, lng) {
+//     latDataDrop.value = lat.toFixed(3);
+//     lngDataDrop.value = lng.toFixed(3);
+// }
 
 // Function for storing user-selected latitude and longitude
 function storeUserLatLng() {
   latLngObject = { lat: entryLat, lng: entryLng };
   localStorage.setItem('latLngObject', JSON.stringify(latLngObject));
 }
+
+// Function for aggregating all coordinate entries
+function locStoreUserLatLng() {
+  // If key exists initialize locData with parsed localStorage, or else create new array
+  var locData = JSON.parse(localStorage.getItem('loc_key_data')) || [];
+  // console.log(locData);
+
+  // Get latitude and longitude and push values to locData array
+  locData.push(parseFloat(entryLat));
+  locData.push(parseFloat(entryLng));
+  localStorage.setItem('loc_key_data', JSON.stringify(locData));
+  console.log(JSON.parse(localStorage.getItem('loc_key_data')));
+  locDataArray = (JSON.parse(localStorage.getItem('loc_key_data')));
+  console.log(locDataArray.length);
+}
+
+// Function to provide locDataArray to heatmap.js
+// function locDataArrayForHeatmap() {
+//   locStoreUserLatLng();
+//   return locDataArray;
+// }

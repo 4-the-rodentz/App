@@ -3,7 +3,7 @@
 // var parsedLatLng = JSON.parse(retrievedLatLng);
 var parsedLatLng = JSON.parse(localStorage.getItem('latLngObject'));  // latLngObject defined in getCoords.js
 // console.log('retrievedLatLng: ', JSON.parse(retrievedLatLng));
-console.log('parsedLatLng: ', parsedLatLng);
+// console.log('parsedLatLng: ', parsedLatLng);
 
 var map, heatmap;
 
@@ -16,6 +16,7 @@ function initMap() {
 
   heatmap = new google.maps.visualization.HeatmapLayer({
     data: getPoints(),
+    // data: showUserPoints(),
     map: map,
     radius: 30  // Size of heatmap points range 0-50, 30 best for 4-the-rodentz
   });
@@ -43,9 +44,22 @@ function changeGradient() {
 }
 
 
-// Heatmap data
+// The big aggregated heatmap data dump
+// function showUserPoints() {
+//   locStoreUserLatLng();
+//   for (var i = 0; i < locDataArray.length; i++ ) {
+//     console.log("lng: " + locDataArray[i] + ", lat: " + locDataArray[i+1]);
+//     return [
+//       new google.maps.LatLng(locDataArray[i], locDataArray[i+1])
+//     ];
+//   }
+// }
+
+
+// Hardcoded heatmap data
 function getPoints() {
-  return [
+  // var pointArray = [
+  [
     new google.maps.LatLng(45.516410, -122.676450),
     new google.maps.LatLng(45.516330, -122.676490),
     new google.maps.LatLng(45.516390, -122.676510),
@@ -110,6 +124,14 @@ function getPoints() {
     new google.maps.LatLng(45.514580, -122.595060),
     new google.maps.LatLng(45.515260, -122.596900),
     new google.maps.LatLng(45.511830, -122.595900),
-    new google.maps.LatLng(parsedLatLng.lat, parsedLatLng.lng) // variable data from getCoords.js
+
+    // new google.maps.LatLng(parsedLatLng.lat, parsedLatLng.lng) // variable data from getCoords.js
   ];
+  // locStoreUserLatLng();
+  // for (var i = 0; i < locDataArray.length; i+=2 ) {
+  //   console.log("lng: " + locDataArray[i] + ", lat: " + locDataArray[i+1]);
+  //   var forLocationPush = new google.maps.LatLng(locDataArray[i], locDataArray[i+1]);
+  //   pointArray.push(forLocationPush);
+  // }
+  // return pointArray;
 }
