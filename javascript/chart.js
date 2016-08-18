@@ -304,5 +304,4 @@ function choseChartType() {
   if (document.getElementById("chartType").value == "seasonalchart") { // added by TLS
     drawStackedBarChart();
   } // end of added by TLS
-}
 
