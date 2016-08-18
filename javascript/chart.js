@@ -37,18 +37,16 @@ function convert() {
 }
 
 var beaverSeason = []; // added by TLS
-var beaverMonthCount = 0;
 var ratSeason = [];
-var ratMonthCount = 0;
 var voleSeason = [];
-var voleMonthCount = 0;
 var mouseSeason = [];
-var mouseMonthCount = 0;
 var observeMonth = [];
 
 
 function convertMonth() {
 for (var i = 0; i < locations.length; i++) {
+  if ((locations[i].observeMonth == "January") && (locations[i].observeMonth ==)
+
   if(locations[i].observeMonth == "January") {
     observeMonth = new Date(2016, 00, 1);
   }
@@ -64,11 +62,7 @@ for (var i = 0; i < locations.length; i++) {
 convertMonth();
 
 for (var i = 0; i < locations.length; i++) {
-    if (locations[i].rodentType == "Beaver") {
-      beaverMonthCount++;
-      console.log(beaverMonthCount);
-    }
-    var objBeaver = { x: observeMonth, y: beaverMonthCount };
+    var objBeaver = { x: observeMonth, y: beaverCount };
     if (locations[i].rodentType == "Beaver") {
       beaverSeason.push(objBeaver); // dataPoints for Beaver input to chart
       console.log(objBeaver);
@@ -77,10 +71,10 @@ for (var i = 0; i < locations.length; i++) {
 
 for (var i = 0; i < locations.length; i++) {
     if (locations[i].rodentType == "Rat") {
-      ratMonthCount++;
-      console.log(ratMonthCount);
+      ratCount++;
+      console.log(ratCount);
     }
-    var objRat = { x: observeMonth, y: ratMonthCount };
+    var objRat = { x: observeMonth, y: ratCount };
     if (locations[i].rodentType == 'Rat') {
       ratSeason.push(objRat); // dataPoints for Rat input to chart
       console.log(objRat);
@@ -89,10 +83,10 @@ for (var i = 0; i < locations.length; i++) {
 
 for (var i = 0; i < locations.length; i++) {
     if (locations[i].rodentType == "Vole") {
-      voleMonthCount++;
-      console.log(voleMonthCount);
+      voleCount++;
+      console.log(voleCount);
     }
-    var objVole = { x: observeMonth, y: voleMonthCount };
+    var objVole = { x: observeMonth, y: voleCount };
     if (locations[i].rodentType == 'Vole') {
       voleSeason.push(objVole); // dataPoints for Vole input to chart
       console.log(objVole);
@@ -101,10 +95,10 @@ for (var i = 0; i < locations.length; i++) {
 
 for (var i = 0; i < locations.length; i++) {
     if (locations[i].rodentType == "Mouse") {
-      mouseMonthCount++;
+      mouseCount++;
       console.log(mouseMonthCount);
     }
-    var objMouse = { x: observeMonth, y: mouseMonthCount };
+    var objMouse = { x: observeMonth, y: mouseCount };
     if (locations[i].rodentType == 'Mouse') {
       mouseSeason.push(objMouse); // dataPoints for Mouse input to chart
       console.log(objMouse);
