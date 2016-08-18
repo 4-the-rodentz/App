@@ -29,8 +29,8 @@ function convert() {
   for (var i = 0; i < 4; i++) {
     var newObj = {
       label: locations[i].rodentType,
-      y: animalsArray[i],
-    }
+      y: animalsArray[i]
+    };
 
     newArr.push(newObj);
   }
