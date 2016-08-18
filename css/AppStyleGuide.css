@@ -104,8 +104,8 @@ nav a:hover {
 article p {
     margin: 0;
     padding: 30px;
-    background-color: white;
-    font-family: 'Oregano', cursive;
+    background-color: #F3EDE1;
+    font-family: 'Pathway Gothic One', sans-serif;
     font-size: 24px;
     text-align: justify;
     vertical-align: text-top;
@@ -206,7 +206,9 @@ h3 {
     flex-direction: column;
     text-align: center;
 }
-
+#images-article article a {
+    color: darkslategrey;
+}
 #home-page {
 }
 
@@ -376,6 +378,9 @@ h3 {
 
 #chartContainer {
     margin: 50px auto 50px auto;
+    overflow: hidden;
+    transition: height 500ms ease-in-out;
+    height: 0px;
 }
 
 #seasonalChart {
