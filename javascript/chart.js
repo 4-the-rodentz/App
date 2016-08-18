@@ -44,13 +44,31 @@ var voleSeason = [];
 var voleMonthCount = 0;
 var mouseSeason = [];
 var mouseMonthCount = 0;
+var observeMonth = [];
+
+
+function convertMonth() {
+for (var i = 0; i < locations.length; i++) {
+  if(locations[i].observeMonth == "January") {
+    observeMonth = new Date(2016, 00, 1);
+  }
+  if(locations[i].observeMonth == "February") {
+    observeMonth = new Date(2016, 01, 1);
+  }
+  if(locations[i].observeMonth == "March") {
+    observeMonth = new Date(2016, 02, 1);
+  }
+}
+}
+
+convertMonth();
 
 for (var i = 0; i < locations.length; i++) {
     if (locations[i].rodentType == "Beaver") {
       beaverMonthCount++;
       console.log(beaverMonthCount);
     }
-    var objBeaver = { x: locations[i].observeMonth, y: beaverMonthCount };
+    var objBeaver = { x: observeMonth, y: beaverMonthCount };
     if (locations[i].rodentType == "Beaver") {
       beaverSeason.push(objBeaver); // dataPoints for Beaver input to chart
       console.log(objBeaver);
@@ -62,7 +80,7 @@ for (var i = 0; i < locations.length; i++) {
       ratMonthCount++;
       console.log(ratMonthCount);
     }
-    var objRat = { x: locations[i].observeMonth, y: ratMonthCount };
+    var objRat = { x: observeMonth, y: ratMonthCount };
     if (locations[i].rodentType == 'Rat') {
       ratSeason.push(objRat); // dataPoints for Rat input to chart
       console.log(objRat);
@@ -74,7 +92,7 @@ for (var i = 0; i < locations.length; i++) {
       voleMonthCount++;
       console.log(voleMonthCount);
     }
-    var objVole = { x: locations[i].observeMonth, y: voleMonthCount };
+    var objVole = { x: observeMonth, y: voleMonthCount };
     if (locations[i].rodentType == 'Vole') {
       voleSeason.push(objVole); // dataPoints for Vole input to chart
       console.log(objVole);
@@ -86,7 +104,7 @@ for (var i = 0; i < locations.length; i++) {
       mouseMonthCount++;
       console.log(mouseMonthCount);
     }
-    var objMouse = { x: locations[i].observeMonth, y: mouseMonthCount };
+    var objMouse = { x: observeMonth, y: mouseMonthCount };
     if (locations[i].rodentType == 'Mouse') {
       mouseSeason.push(objMouse); // dataPoints for Mouse input to chart
       console.log(objMouse);
@@ -183,4 +201,4 @@ function choseChartType() {
   if (document.getElementById("chartType").value == "seasonalchart") { // added by TLS
     drawStackedBarChart();
   } // end of added by TLS
-}
+};
