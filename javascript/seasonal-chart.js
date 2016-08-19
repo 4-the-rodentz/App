@@ -55,7 +55,7 @@ function drawStackedBarChart() {
       legendText: "Mouse",
       showInLegend: "true",
       dataPoints: mouseSeason,
-    },
+    }
     ]
   });
   chart.render();

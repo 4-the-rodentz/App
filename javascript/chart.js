@@ -3,48 +3,52 @@ var ratCount = 0;
 var voleCount = 0;
 var mouseCount = 0;
 
-function animalCounts() {
-for (var i = 0; i < locations.length; i++) {
-  if (locations[i].rodentType == "Beaver") {
-    beaverCount++
-  }
-  if (locations[i].rodentType == "Rat") {
-    ratCount++
-  }
-  if (locations[i].rodentType == "Vole") {
-    voleCount++
-  }
-  if (locations[i].rodentType == "Mouse") {
-    mouseCount++
-  }
-}
-    // var localAnimals = JSON.parse(localStorage.getItem('animalCount'));
-    // beaverCount += localAnimals.localBeaverCount;
-    // ratCount += localAnimals.localRatCount;
-    // voleCount += localAnimals.localVoleCount;
-    // mouseCount += localAnimals.localMouseCount;
-}
-animalCounts();
+var animalNames = ["Beaver", "Rat", "Vole", "Mouse"];
 
-var animalsArray = [beaverCount, ratCount, voleCount, mouseCount];
-var newArr = [];
+(function animalCounts() {
+    for (var i = 0; i < locations.length; i++) {
+        if (locations[i].rodentType == "Beaver") {
+            beaverCount++
+        }
+        if (locations[i].rodentType == "Rat") {
+            ratCount++
+        }
+        if (locations[i].rodentType == "Vole") {
+            voleCount++
+        }
+        if (locations[i].rodentType == "Mouse") {
+            mouseCount++
+        }
+    }
+    var localAnimals = JSON.parse(localStorage.getItem('animalCount'));
+    if(localAnimals) {
+        beaverCount += localAnimals.localBeaverCount;
+        ratCount += localAnimals.localRatCount;
+        voleCount += localAnimals.localVoleCount;
+        mouseCount += localAnimals.localMouseCount;
+    }
+    animalsArray = [beaverCount, ratCount, voleCount, mouseCount];
+    return animalsArray;
+})();
+
 
 function convert() {
-  newArr = [];
-  for (var i = 0; i < 4; i++) {
-    var newObj = {
-      label: locations[i].rodentType,
-      y: animalsArray[i]
-    };
+    var newArr = [];
 
-    newArr.push(newObj);
-  }
+    for (var i = 0; i < animalsArray.length; i++) {
+        var newObj = {
+            label: animalNames[i],
+            y: animalsArray[i]
+        };
+        newArr.push(newObj);
+    }
+    return newArr;
 }
 
 var beaverWinter = 0;
 var beaverSpring = 0;
 var beaverSummer = 0;
-var beaverFall = 0;
+var beaverFall = 0; // added by TLS
 
 var voleWinter = 0;
 var voleSpring = 0;
@@ -160,74 +164,78 @@ function mouseSeason() {
         }
     }
 }
-
-for (var i = 0; i < locations.length; i++) {
-    if (locations[i].rodentType == "Beaver") {
-      beaverMonthCount++;
-      console.log(beaverMonthCount);
-    }
-    var objBeaver = { x: observeMonth, y: beaverMonthCount };
-    if (locations[i].rodentType == "Beaver") {
-      beaverSeason.push(objBeaver); // dataPoints for Beaver input to chart
-      console.log(objBeaver);
-    }
-}
-
-for (var i = 0; i < locations.length; i++) {
-    if (locations[i].rodentType == "Rat") {
-      ratMonthCount++;
-      console.log(ratMonthCount);
-    }
-    var objRat = { x: observeMonth, y: ratMonthCount };
-    if (locations[i].rodentType == 'Rat') {
-      ratSeason.push(objRat); // dataPoints for Rat input to chart
-      console.log(objRat);
-    }
-}
-
-for (var i = 0; i < locations.length; i++) {
-    if (locations[i].rodentType == "Vole") {
-      voleMonthCount++;
-      console.log(voleMonthCount);
-    }
-    var objVole = { x: observeMonth, y: voleMonthCount };
-    if (locations[i].rodentType == 'Vole') {
-      voleSeason.push(objVole); // dataPoints for Vole input to chart
-      console.log(objVole);
-    }
-}
-
-for (var i = 0; i < locations.length; i++) {
-    if (locations[i].rodentType == "Mouse") {
-      mouseMonthCount++;
-      console.log(mouseMonthCount);
-    }
-    var objMouse = { x: observeMonth, y: mouseMonthCount };
-    if (locations[i].rodentType == 'Mouse') {
-      mouseSeason.push(objMouse); // dataPoints for Mouse input to chart
-      console.log(objMouse);
-    }
-} // end of added by TLS
+// var beaverMonthCount = 0;
+// var ratMonthCount = 0;
+// var voleMonthCount = 0;
+// var mouseMonthCount = 0;
+//
+// for (var j = 0; j < locations.length; j++) {
+//     if (locations[j].rodentType == "Beaver") {
+//       beaverMonthCount++;
+//       console.log(beaverMonthCount);
+//     }
+//     var objBeaver = { x: observeMonth, y: beaverMonthCount };
+//     if (locations[j].rodentType == "Beaver") {
+//       beaverSeason.push(objBeaver); // dataPoints for Beaver input to chart
+//       console.log(objBeaver);
+//     }
+// }
+//
+// for (var k = 0; k < locations.length; k++) {
+//     if (locations[k].rodentType == "Rat") {
+//       ratMonthCount++;
+//       console.log(ratMonthCount);
+//     }
+//     var objRat = { x: observeMonth, y: ratMonthCount };
+//     if (locations[k].rodentType == 'Rat') {
+//       ratSeason.push(objRat); // dataPoints for Rat input to chart
+//       console.log(objRat);
+//     }
+// }
+//
+// for (var l = 0; l < locations.length; l++) {
+//     if (locations[l].rodentType == "Vole") {
+//       voleMonthCount++;
+//       console.log(voleMonthCount);
+//     }
+//     var objVole = { x: observeMonth, y: voleMonthCount };
+//     if (locations[l].rodentType == 'Vole') {
+//       voleSeason.push(objVole); // dataPoints for Vole input to chart
+//       console.log(objVole);
+//     }
+// }
+//
+// for (var m = 0; m < locations.length; m++) {
+//     if (locations[m].rodentType == "Mouse") {
+//       mouseMonthCount++;
+//       console.log(mouseMonthCount);
+//     }
+//     var objMouse = { x: observeMonth, y: mouseMonthCount };
+//     if (locations[m].rodentType == 'Mouse') {
+//       mouseSeason.push(objMouse); // dataPoints for Mouse input to chart
+//       console.log(objMouse);
+//     }
+// } // end of added by TLS
 
 
 function drawBarChart() {
-  convert();
-	var chart = new CanvasJS.Chart("chartContainer", {
-		title:{
-			text: "Number of Rodents in the Greater Portland Area"
-		},
-		data: [
-		{
-			type: "column",
-			dataPoints: newArr
-		}
-		]
-	});
-	chart.render();
+
+    var chart = new CanvasJS.Chart("chartContainer", {
+        title: {
+            text: "Number of Rodents in the Greater Portland Area"
+        },
+        data: [
+            {
+                type: "column",
+                dataPoints: convert()
+            }
+        ]
+    });
+    chart.render();
 }
 
 function drawPieChart() {
-  convert();
+
 	var chart = new CanvasJS.Chart("chartContainer", {
 		title:{
 			text: "Number of Rodents in the Greater Portland Area"
@@ -235,7 +243,7 @@ function drawPieChart() {
 		data: [
 		{
 			type: "pie",
-			dataPoints: newArr
+			dataPoints: convert()
 		}
 		]
 	});
@@ -243,113 +251,78 @@ function drawPieChart() {
 }
 
 function drawStackedBarChart() { // added by TLS
-beaverSeason();
-ratSeason();
-voleSeason();
-mouseSeason();
+
   var chart = new CanvasJS.Chart("chartContainer", {
-    title:{
+      title:{
     text: "Seasonality of Rodent Sightings within the Greater Portland Area"
     },
     data: [
          {
-           type: "stackedBar",
+           type: "stackedBar100",
            legendText: "Spring",
            showInLegend: "true",
             dataPoints: [
            { label: "Beaver", y: beaverSpring },
            { label: "Rat", y: ratSpring},
            { label: "Vole", y: voleSpring },
-           { label: "Mouse", y: mouseSpring },
+           { label: "Mouse", y: mouseSpring }
            ]
          },
           {
-           type: "stackedBar",
+           type: "stackedBar100",
            legendText: "Summer",
            showInLegend: "true",
             dataPoints: [
            { label: "Beaver", y: beaverSummer },
            { label: "Rat", y: ratSummer},
            { label: "Vole", y: voleSummer },
-           { label: "Mouse", y: mouseSummer },
+           { label: "Mouse", y: mouseSummer }
            ]
          },
            {
-           type: "stackedBar",
+           type: "stackedBar100",
            legendText: "Fall",
            showInLegend: "true",
             dataPoints: [
            { label: "Beaver", y: beaverFall },
            { label: "Rat", y: ratFall},
            { label: "Vole", y: voleFall },
-           { label: "Mouse", y: mouseFall },
+           { label: "Mouse", y: mouseFall }
            ]
          },
               {
-           type: "stackedBar",
+           type: "stackedBar100",
            legendText: "Winter",
            showInLegend: "true",
             dataPoints: [
            { label: "Beaver", y: beaverWinter },
            { label: "Rat", y: ratWinter},
            { label: "Vole", y: voleWinter },
-           { label: "Mouse", y: mouseWinter },
+           { label: "Mouse", y: mouseWinter }
            ]
-         },
-
+         }
          ]
        });
-
        chart.render();
-     }
+     }// end of added by TLS
 
-    data: [
-    {
-      type: "stackedBar",
-      legendText: "Beaver",
-      showInLegend: "true",
-      dataPoints: beaverSeason
-    },
-      {
-      type: "stackedBar",
-      legendText: "Rat",
-      showInLegend: "true",
-      dataPoints: ratSeason
-    },
-      {
-      type: "stackedBar",
-      legendText: "Vole",
-      showInLegend: "true",
-      dataPoints: voleSeason
-    },
-      {
-      type: "stackedBar",
-      legendText: "Mouse",
-      showInLegend: "true",
-      dataPoints: mouseSeason
-    }
-    ]
-  });
-  chart.render();
-} // end of added by TLS
-
-//
-// drawBarChart();
-// drawPieChart();
 document.getElementById('chartType').addEventListener("change", choseChartType);
 
 function choseChartType() {
-  if (document.getElementById("chartType").value == "piechart") {
-    drawPieChart();
-  }
-  if (document.getElementById("chartType").value == "barchart"){
-    drawBarChart();
-  }
+    if (document.getElementById("chartType").value == "piechart") {
+        drawPieChart();
+    }
+    if (document.getElementById("chartType").value == "barchart") {
+        drawBarChart();
+    }
+    if (document.getElementById("chartType").value == "seasonalchart") { // added by TLS
+        beaverSeason();
+        ratSeason();
+        voleSeason();
+        mouseSeason();
+        drawStackedBarChart();
+    } // end of added by TLS
 
-  // animate the chart into view
-    document.getElementById('chartContainer').style.height = '500px';
+
+    document.getElementById('chartContainer').style.height = '500px'; // animate the chart into view
 }
-
-  if (document.getElementById("chartType").value == "seasonalchart") { // added by TLS
-    drawStackedBarChart();
-  } // end of added by TLS
