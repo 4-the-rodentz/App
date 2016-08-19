@@ -424,6 +424,7 @@ h3 {
 #user-form legend {
     font-size: 25px;
     color: #F2CC08;
+    width: 100%;
 }
 
 #user-form input {
