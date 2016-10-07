@@ -9,3 +9,5 @@ The app gives rewards to users adding more than a certain amount of data.
 
 Additional inspirations include the bird spotting app "Merlin" and Pokemon-Go 
 //Icon by Banksy
+
+A working example can be found at https://4-the-rodentz.github.io/App/html/index.html
